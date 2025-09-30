@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>About Us — Deus Cautela Limited</title>
 
-  <!-- Replace with your preferred webfont if desired -->
+  
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
   <meta name="description" content="Deus Cautela Limited — licensed private security firm (RC:1303572). Industrial & commercial security solutions across Nigeria & West Africa." />
 
-  <!-- JSON-LD Organization (update if you have different URLs or phone) -->
+  
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -58,8 +58,7 @@
       line-height:1.45;
     }
 
-   /* Header and Navigation */
-/* Header defaults to transparent */
+   
        
 .site-header {
   background-color: transparent;
@@ -75,7 +74,7 @@
   backdrop-filter: saturate(180%) blur(10px); 
 }
 
-/* ===== Info Bar Styles ===== */
+
 .info-bar {
   background: #fff;
   color: #100220;
@@ -116,18 +115,18 @@
 }
 
 
-/* ============ NAVBAR ============ */
+
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;               /* Make navbar stretch full width */
-  padding: 0 40px;           /* Add spacing left & right */
-  background-color: white; /* Set header/nav background */
+  width: 100%;              
+  padding: 0 40px;          
+  background-color: white; 
   box-sizing: border-box;
 }
 
-/* Nav-links container */
+
 .nav-links {
   list-style: none;
   display: flex;
@@ -153,7 +152,7 @@
   color: blueviolet;              
 }
 
-/* Logo */
+
 .logo {
   display: flex;
   align-items: center;
@@ -174,7 +173,7 @@
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-/* Dropdown basics */
+
 .dropdown {
   position: relative;
   z-index:1500;
@@ -187,7 +186,7 @@
   padding: 10px;
 }
 
-/* Dropdown menu */
+
 .dropdown-content {
   display: none;
   position: absolute;
@@ -218,8 +217,7 @@
   display: block;
 }
 
-/* Mega dropdown container */
-/* Mega dropdown container */
+
 .mega-dropdown {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -237,7 +235,7 @@
   min-width: 600px;
   z-index: 2000;
 
-  /* Animation states */
+  
   opacity: 0;
   transform: translateY(15px); /* start slightly lower */
   visibility: hidden;
@@ -246,7 +244,7 @@
   transition: opacity 0.35s ease, transform 0.35s ease, visibility 0.35s ease;
 }
 
-/* Show mega dropdown on hover */
+
 .dropdown:hover .mega-dropdown {
   opacity: 1;
   transform: translateY(0); /* slide into place */
@@ -254,7 +252,7 @@
   pointer-events: auto;
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 900px) {
   .mega-dropdown {
     grid-template-columns: 1fr;
@@ -267,7 +265,7 @@
   }
 }
 
-/* Mega dropdown left column */
+
 .dropdown-left h3 {
   font-size: 18px;
   margin: 0;
@@ -303,7 +301,7 @@
   color: #ff6b00;
 }
 
-/* Mega dropdown right column */
+
 .dropdown-right ul {
   list-style: none;
   padding: 0;
@@ -339,7 +337,7 @@
   color: var(--white);
 }
 
-/* Background image with fade/zoom animation */
+
 .hero::before {
   content: "";
   position: absolute;
@@ -352,7 +350,7 @@
   animation: heroBgIn 1.8s ease forwards;
 }
 
-/* Dark overlay */
+
 .hero::after {
   content: "";
   position: absolute;
@@ -363,7 +361,7 @@
   animation: overlayFade 2s ease forwards;
 }
 
-/* Text container with slide/fade animation */
+
 .hero-inner {
   position: relative;
   z-index: 2;
@@ -376,7 +374,7 @@
   animation: heroTextIn 1.6s ease forwards 0.8s;
 }
 
-/* KEYFRAMES */
+
 @keyframes heroBgIn {
   to {
     transform: scale(1);
@@ -516,13 +514,13 @@
   font-size: 0.95rem;
 }
 
-/* Hover effect */
+
 .perk-card:hover {
   transform: translateY(-10px) scale(1.03);
   box-shadow: 0 12px 35px rgba(0, 191, 255, 0.3);
 }
 
-/* Fade-up animation */
+
 .fade-up {
   animation: fadeUp 1s forwards;
 }
@@ -568,14 +566,14 @@
     }
     .btn-primary:hover{ transform:translateY(-3px); box-shadow:0 14px 30px rgba(3,63,125,0.18) }
 
-    /* MAIN CONTENT CONTAINER */
+    
     .container{
       max-width:var(--max-width);
       margin:28px auto;
       padding:0 20px 80px;
     }
 
-    /* QUICK FACTS (counters) */
+    
     .facts{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
@@ -596,7 +594,7 @@
     }
     .fact p{ margin:6px 0 0; color:var(--muted); font-size:0.95rem }
 
-    /* ABOUT SNAPSHOT */
+    
     .about-snapshot{
       display:grid;
       grid-template-columns: 1fr 360px;
@@ -622,7 +620,7 @@
     .side-cta .small{ color:var(--muted); font-size:0.95rem }
     .side-cta .big{ margin-top:10px; font-weight:700; color:var(--primary) }
 
-    /* ACCORDION (dropdowns) */
+    
     .accordion{
       margin-top:28px;
       display:grid;
@@ -658,7 +656,7 @@
     }
     .acc-body .inner{ padding:16px 0 22px; color:var(--muted); line-height:1.6 }
 
-    /* BOARD GRID */
+   
     .board-grid{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -684,12 +682,12 @@
     .board-meta h4{ margin:0; font-size:1rem; color:var(--dark) }
     .board-meta p{ margin:4px 0 0; color:var(--muted); font-size:0.9rem }
 
-    /* ORG STRUCTURE (simple) */
+    
     .org-chart{ margin-top:18px; background:var(--white); padding:18px; border-radius:10px; box-shadow:0 10px 24px rgba(3,63,125,0.04) }
     .org-levels{display:flex; gap:18px; flex-wrap:wrap; justify-content:space-between}
     .org-level{ flex:1 1 180px; background:#f6fbff; padding:12px; border-radius:8px; text-align:center; color:var(--dark) }
 
-    /* CTA BANNER */
+   
     .cta-banner{
       margin-top:28px;
       background:linear-gradient(90deg,var(--primary),#083a66);
@@ -911,9 +909,7 @@
     </div>
   </div>
 </section>
-  </header>
-
-  <!-- HERO -->
+  </header>  
   <section class="hero" role="img" aria-label="Security services hero image">
     <div class="hero-inner">
       <h1>About  Us</h1>
@@ -922,11 +918,9 @@
     </div>
   </section>
   
-
-  <!-- MAIN CONTENT -->
   <main class="container" role="main">
 
-    <!-- Quick facts / counters -->
+    
     <div class="facts" aria-hidden="false">
       <div class="fact">
         <div class="num" data-target="2015">2015</div>
@@ -945,8 +939,6 @@
         <p>Clients Served (incl. partners)</p>
       </div>
     </div>
-
-<!-- Uniform Formation Gallery -->
 <section aria-label="Our Teams in action" style="margin-top:32px;">
   <h2 style="color:var(--primary)">Our Team in Action</h2>
   <div style="display:flex;overflow-x:auto;gap:12px;padding:18px 0;">
@@ -956,7 +948,7 @@
   </div>
 </section>
 
-<!-- Portrait Row -->
+
 <section aria-label="Leadership Team" style="margin-top:24px;">
   <h2 style="color:var(--primary)">Executive Portraits</h2>
   <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:12px;">
@@ -965,7 +957,7 @@
       <h4 style="margin:8px 0 0;color:var(--dark)">Mr. Clem Nwogbo</h4>
       <p style="color:var(--muted);font-size:0.95rem">Chairman / CEO</p>
     </div>
-    <!-- Add other leadership portraits similarly -->
+   
   </div>
 </section>
 
@@ -989,7 +981,7 @@
 
 
 
-    <!-- About snapshot + CTA column -->
+   
     <div class="about-snapshot">
       <div class="about-card">
         <h2>Who We Are</h2>
@@ -1011,7 +1003,7 @@
       </aside>
     </div>
 
-    <!-- Accordion dropdowns -->
+    
     <section class="accordion" aria-label="Company details">
       <!-- Vision & Core Values -->
       <article class="acc-item">
@@ -1029,7 +1021,7 @@
         </div>
       </article>
 
-      <!-- Board & Management -->
+      
       <article class="acc-item">
         <button class="acc-header" aria-expanded="false" aria-controls="panel-board">
           <h3>Board of Directors & Management</h3>
@@ -1076,7 +1068,7 @@
         </div>
       </article>
 
-      <!-- Organizational Structure -->
+     
       <article class="acc-item">
         <button class="acc-header" aria-expanded="false" aria-controls="panel-structure">
           <h3>Organizational Structure & Key Personnel</h3>
@@ -1098,7 +1090,7 @@
         </div>
       </article>
 
-      <!-- Training & Development -->
+     
       <article class="acc-item">
         <button class="acc-header" aria-expanded="false" aria-controls="panel-training">
           <h3>Training & Development</h3>
@@ -1114,9 +1106,7 @@
             </ul>
           </div>
         </div>
-      </article>
-
-      <!-- Technology / Services -->
+      </article>     
       <article class="acc-item">
         <button class="acc-header" aria-expanded="false" aria-controls="panel-tech">
           <h3>Technology Integration & Services</h3>
@@ -1128,8 +1118,6 @@
           </div>
         </div>
       </article>
-
-      <!-- Clientele & Insurance -->
       <article class="acc-item">
         <button class="acc-header" aria-expanded="false" aria-controls="panel-client">
           <h3>Clientele & Insurance Policies</h3>
@@ -1143,8 +1131,6 @@
       </article>
 
     </section>
-
-    <!-- CTA Banner -->
     <div class="cta-banner" role="region" aria-label="contact call to action">
       <div class="left">
         <h3>Need a bespoke security solution?</h3>
@@ -1167,7 +1153,7 @@
     </p>
 
     <div class="perks-grid">
-      <!-- Card 1 -->
+     
       <div class="perk-card fade-up">
         <i class="fas fa-shield-alt"></i>
         <h3>24/7 Peace of Mind</h3>
@@ -1177,7 +1163,6 @@
         </p>
       </div>
 
-      <!-- Card 2 -->
       <div class="perk-card fade-up delay-1">
         <i class="fas fa-user-secret"></i>
         <h3>Proven Expertise</h3>
@@ -1187,7 +1172,6 @@
         </p>
       </div>
 
-      <!-- Card 3 -->
       <div class="perk-card fade-up delay-2">
         <i class="fas fa-lock"></i>
         <h3>Cutting-Edge Technology</h3>
@@ -1210,19 +1194,14 @@
   </div>
 </section>
 
-  
-
-  
-
-<section class="testimonials-section">
+  <section class="testimonials-section">
   <div class="container">
     <h2 class="section-title">A Decade of Experience, Protecting Lives and Property</h2>
     <p class="section-subtitle">“Solution Driven”</p>
 
     <div class="testimonials-grid">
       
-     
-      <div class="testimonial-card slide-in">
+           <div class="testimonial-card slide-in">
         <p class="testimonial-text">
           "I have been working with <strong>Deus Cautela</strong> for the past five years, and I am continually impressed with their level of service. 
           The staff is friendly and knowledgeable and always willing to help. 
@@ -1234,7 +1213,6 @@
           <span>Ontario, Canada</span>
         </div>
       </div>
-
       
       <div class="testimonial-card slide-in">
         <p class="testimonial-text">
@@ -1249,7 +1227,6 @@
         </div>
       </div>
 
-     
       <div class="testimonial-card slide-in">
         <p class="testimonial-text">
           "I recently had the pleasure of working with <strong>Deus Cautela</strong>. 
@@ -1347,31 +1324,31 @@
   </div>
 </footer>
 
-  <!-- SCRIPTS: accordion, counters, small reveal animations -->
+ 
   <script>
-    // Accessible accordion
+   
     document.querySelectorAll('.acc-header').forEach((btn, i) => {
       btn.addEventListener('click', () => {
         const expanded = btn.getAttribute('aria-expanded') === 'true';
         const panel = document.getElementById(btn.getAttribute('aria-controls'));
-        // Toggle
+       
         btn.setAttribute('aria-expanded', String(!expanded));
         if (!expanded){
-          // open
+         
           panel.style.maxHeight = panel.scrollHeight + 'px';
           btn.querySelector('.chev').style.transform = 'rotate(180deg)';
         } else {
-          // close
+         
           panel.style.maxHeight = null;
           btn.querySelector('.chev').style.transform = 'rotate(0deg)';
         }
       });
-      // init: collapsed
+      
       const panel = document.getElementById(btn.getAttribute('aria-controls'));
       panel.style.maxHeight = null;
     });
 
-    // Animate counters when in view
+    
     const counters = document.querySelectorAll('.num[data-target]');
     const counterObserver = new IntersectionObserver((entries, obs) => {
       entries.forEach(entry => {
@@ -1401,7 +1378,7 @@
 
     counters.forEach(c => counterObserver.observe(c));
 
-    // Small reveal for inner elements (progressive polish)
+   
     const reveal = new IntersectionObserver((entries) => {
       entries.forEach(e => {
         if (e.isIntersecting) {
@@ -1444,7 +1421,7 @@ loadSecurityNews();
 setInterval(loadSecurityNews, 100000); 
 
 
-//TESTIMONIALS
+
 document.addEventListener("scroll", function() {
   const cards = document.querySelectorAll(".testimonial-card");
   const triggerBottom = window.innerHeight * 0.85;
@@ -1461,3 +1438,4 @@ document.addEventListener("scroll", function() {
   </script>
 </body>
 </html>
+
