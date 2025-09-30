@@ -21,22 +21,22 @@ function showSlide() {
 
   
   
-  // Set next background image and fade it in
+ 
   nextBg.style.backgroundImage = `url('${img}')`;
   nextBg.style.opacity = 1;
   nextBg.style.filter = "brightness(.45) saturate(.9)";
 
-  // Fade out current background
+
   currentBg.style.opacity = 1;
 
-  // After fade transition, swap layer roles and reset opacity
+  
   setTimeout(() => {
     currentBg.style.backgroundImage = `url('${img}')`;
     currentBg.style.opacity = 1;
     nextBg.style.opacity = 0;
   }, 2500);
 
-  // Animate text
+  
   headerEl.style.opacity = 0;
   paraEl.style.opacity = 0;
   setTimeout(() => {
@@ -68,7 +68,7 @@ showSlide();
 setInterval(showSlide, 6000);
 
 
-//BEHIND THE BRAND SCROLL ANIMATION JS
+
 document.addEventListener("DOMContentLoaded", () => {
   const cards = document.querySelectorAll(".brand-card");
 
@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-//for scroll fade-ins
+
 
 document.addEventListener('DOMContentLoaded', () => {
   const animatedItems = document.querySelectorAll('.scroll-animate');
@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-//TESTIMONIALS
+
 document.addEventListener("scroll", function() {
   const cards = document.querySelectorAll(".testimonial-card");
   const triggerBottom = window.innerHeight * 0.85;
@@ -143,7 +143,7 @@ document.addEventListener("scroll", function() {
   });
 });
 
-// Reveal on scroll
+
 document.addEventListener("scroll", () => {
   document.querySelectorAll("[data-animate]").forEach(el => {
     const rect = el.getBoundingClientRect();
@@ -176,5 +176,16 @@ async function loadSecurityNews() {
 }
 loadSecurityNews();
 setInterval(loadSecurityNews, 100000); 
+
+loadSecurityNews();
+setInterval(loadSecurityNews, 100000); 
+
+ const hamburger = document.querySelector(".hamburger");
+  const navLinks = document.querySelector(".nav-links");
+
+  hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+    hamburger.classList.toggle("active");
+  });
 
 
