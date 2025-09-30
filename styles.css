@@ -66,6 +66,110 @@ body {
 
 }
 
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background: #fff;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: #111;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .nav-links.show {
+    display: flex;
+    animation: slideDown 0.3s ease forwards;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* Animation for dropdown */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+@media (max-width: 991px) {
+  .services-across-africa {
+    padding: 70px 15px;
+  }
+
+  .services-panels {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+  }
+}
+
+/* Phones */
+@media (max-width: 600px) {
+  .services-across-africa {
+    padding: 50px 10px;
+  }
+
+  .services-panels {
+    grid-template-columns: 1fr; /* stack panels vertically */
+    gap: 15px;
+  }
+
+  .service-panel {
+    height: 280px; /* smaller height */
+    border-radius: 15px;
+  }
+
+  .text-layer {
+    padding: 15px;
+  }
+
+  .text-layer h3 {
+    font-size: 1.2rem;
+  }
+
+  .text-layer p {
+    font-size: 0.9rem;
+  }
+
+  .text-layer .btn-quote {
+    font-size: 0.85rem;
+    padding: 6px 14px;
+  }
+}
+
+
 .news-rotator {
   width: 100%;
   background: linear-gradient(90deg, #111, #000);
@@ -1378,4 +1482,5 @@ body {
 @media (max-width: 700px) {
   .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
   .newsletter input { width: 100%; margin-bottom: 10px; }
+
 }
