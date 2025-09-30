@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leadership | Deus Cautela Limited</title>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: #f7f7f7;
+      color: #222;
+      line-height: 1.7;
+    }
+
+.site-header {
+  background-color: transparent;
+  position: fixed;
+  width: 101%;
+  top: 0;
+  z-index: 100;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.site-header.scrolled {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: saturate(180%) blur(10px); 
+}
+
+
+/* ===== Info Bar Styles ===== */
+.info-bar {
+  background: #fff;
+  color: #100220;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 0;
+  border-bottom: 2px solid #1d009e;
+  position: relative;
+  z-index: 1000;
+  height: 50px;
+}
+
+.info-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: transform 0.3s ease;
+}
+
+.info-item:hover {
+  transform: translateY(-2px);
+  color: #ffb400;
+}
+
+.info-item i {
+  color: #ffb400;
+  font-size: 16px;
+}
+
+
+/* ============ NAVBAR ============ */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;               /* Make navbar stretch full width */
+  padding: 0 40px;           /* Add spacing left & right */
+  background-color: white; /* Set header/nav background */
+  box-sizing: border-box;
+}
+
+/* Nav-links container */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 0.1em;
+  padding-right: 80px;
+  margin: 0;
+  align-items: center;
+}
+
+.nav-links a {
+  display: inline-block;       
+  padding: 8px 32px;           
+  text-decoration: none;
+  color: #003f7d;
+  font-weight: 500;
+  border-radius: 5px;          
+  transition: background 0.2s, color 0.2s;
+  font-weight: 600;
+}
+
+.nav-links a:hover {
+  background-color: #e6f0fa;   
+  color: blueviolet;              
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 80px;
+  width: auto;
+  margin-right: 1.75em;
+  padding-left: 40px;
+  padding-top: 10px;
+}
+
+.company-name {
+  font-size: 1.2em;
+  font-weight:bolder;
+  color: #003f7d;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Dropdown basics */
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  text-decoration: none;
+  font-weight: bold;
+  color: #fff;
+  padding: 10px;
+}
+
+/* Dropdown menu */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  min-width: 200px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  border-radius: 6px;
+  z-index: 1099;
+}
+
+.dropdown-content li {
+  list-style: none;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 12px 16px;
+  color: #003f7d;
+}
+
+.dropdown-content a:hover {
+  background: #f2f8ff;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Mega dropdown container */
+/* Mega dropdown container */
+.mega-dropdown {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  box-sizing: border-box;
+
+  position: absolute;
+  top: 100%; /* directly under parent link */
+  left: 0;
+  background: #f4f6fb;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  border-radius: 10px;
+  width: max-content;
+  min-width: 600px;
+  z-index: 2000;
+
+  /* Animation states */
+  opacity: 0;
+  transform: translateY(15px); /* start slightly lower */
+  visibility: hidden;
+  pointer-events: none;
+
+  transition: opacity 0.35s ease, transform 0.35s ease, visibility 0.35s ease;
+}
+
+/* Show mega dropdown on hover */
+.dropdown:hover .mega-dropdown {
+  opacity: 1;
+  transform: translateY(0); /* slide into place */
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .mega-dropdown {
+    grid-template-columns: 1fr;
+    min-width: 100%; /* take full width */
+    position: static;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 15px;
+    transform: none;
+  }
+}
+
+/* Mega dropdown left column */
+.dropdown-left h3 {
+  font-size: 18px;
+  margin: 0;
+  color: #2b2e83;
+}
+
+.yellow-line {
+  width: 80%;
+  height: 4px;
+  background: #001aff;
+  border: none;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+.dropdown-left ul {
+  list-style: none;
+  padding: 0;
+}
+
+.dropdown-left ul li {
+  margin: 10px 0;
+}
+
+.dropdown-left ul li a {
+  text-decoration: none;
+  color: #2b2e83;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.dropdown-left ul li a:hover {
+  color: #ff6b00;
+}
+
+/* Mega dropdown right column */
+.dropdown-right ul {
+  list-style: none;
+  padding: 0;
+}
+
+.dropdown-right li {
+  margin: 12px 0;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  color: #333;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown-right li:hover {
+  color: #ff6b00;
+  transform: translateX(5px);
+}
+
+.dropdown-right .icon {
+  margin-right: 10px;
+  font-size: 18px;
+  color: #ffb400;
+}
+
+    .hero {
+       background: linear-gradient(rgba(11, 26, 48, 0.85), rgba(11, 26, 48, 0.85)),
+              url("CSS.png") no-repeat center center/cover;
+      height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+      position: relative;
+        transform: translateY(40px);
+  animation: heroTextIn 1.6s ease forwards 0.8s;
+}
+
+
+@keyframes heroBgIn {
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes overlayFade {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes heroTextIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+    
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.65);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    .hero-content h2 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+    .hero-content p {
+      font-size: 18px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 60px 80px;
+    }
+    .section h2 {
+      font-size: 36px;
+      margin-bottom: 30px;
+      text-align: center;
+      color: #004e92;
+    }
+
+    .leaders {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+    .leader-card {
+      background: #fff;
+      border-radius: 15px;
+      padding: 25px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      transition: transform 0.4s ease;
+    }
+    .leader-card:hover {
+      transform: translateY(-10px);
+    }
+    .leader-card img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border: 4px solid #004e92;
+    }
+    .leader-card h3 {
+      margin: 10px 0 5px;
+      color: #111;
+    }
+    .leader-card p {
+      font-size: 14px;
+      color: #555;
+    }
+
+
+/*TESTIMONIALS*/
+
+.testimonials-section {
+  background: #0d0d0d;
+  color: #fff;
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.testimonials-section h5 {
+  background: #0d0d0d;
+  color: #fff;
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.testimonial-card {
+  background: rgba(255,255,255,0.05);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+  transform: translateX(150px);
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.testimonial-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #eee;
+}
+
+.testimonial-author h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #00bcd4;
+}
+
+.testimonial-author span {
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+/* Slide-in Active State */
+.testimonial-card.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+
+.security-perks {
+  background: linear-gradient(135deg, #0a0f1c, #1a2235);
+  padding: 100px 20px;
+  color: #e0e6f0;
+  text-align: center;
+}
+
+.security-perks .section-title {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.security-perks .section-title span {
+  color: #00bfff;
+}
+
+.security-perks .section-subtitle {
+  max-width: 700px;
+  margin: 0 auto 50px;
+  font-size: 1.1rem;
+  color: #bfc6d4;
+}
+
+.perks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.perk-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 30px 20px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.perk-card i {
+  font-size: 2.5rem;
+  color: #00bfff;
+  margin-bottom: 20px;
+}
+
+.perk-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+.perk-card p {
+  color: #c9d1e5;
+  font-size: 0.95rem;
+}
+
+/* Hover effect */
+.perk-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 12px 35px rgba(0, 191, 255, 0.3);
+}
+
+/* Fade-up animation */
+.fade-up {
+  animation: fadeUp 1s forwards;
+}
+
+.fade-up.delay-1 { animation-delay: 0.3s; }
+.fade-up.delay-2 { animation-delay: 0.6s; }
+.fade-up.delay-3 { animation-delay: 0.9s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+
+
+    footer {
+      background: #111;
+      color: #aaa;
+      padding: 40px 60px;
+      text-align: center;
+    }
+    footer p { margin: 5px 0; }
+    footer a {
+      color: #f0c330;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+<header class="site-header">
+    <nav class="navbar">
+      <div class="logo">
+        <img src="logo.png" alt="Deus Cautela Limited Logo">
+        <span class="company-name">Deus Cautela Limited</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+
+        <!-- Leadership Dropdown -->
+        <li class="dropdown">
+          <a href="#leadership" class="dropbtn">Leadership ▾</a>
+          <ul class="dropdown-content">
+            <li><a href="whoweare.html">Who We Are</a></li>
+            <li><a href="leadership.html">Leadership</a></li>
+            <li><a href=".html#clients">Our Clients</a></li>
+          </ul>
+        </li>
+
+        <!-- Cyber Security Service Mega Dropdown -->
+        <li class="dropdown">
+          <a href="#" class="dropbtn">Our Security Solutions ▾</a>
+          <div class="mega-dropdown">
+            <!-- LEFT COLUMN -->
+            <div class="dropdown-left">
+              <h3>Our Security Solutions</h3>
+              <hr class="yellow-line">
+              <ul>
+                <li><a href="security-technologies.html">Security Technologies / IOT</a></li>
+                <li><a href="physical-security.html">Physical security & Mobility</a></li>
+                <li><a href="identity-risk.html">Identity risk solutions & outsourcing</a></li>
+                <li><a href="security-education.html">Security education</a></li>
+                <li><a href="security-advisory.html">Security risk advisory & consultancy</a></li>
+                <li><a href="defence-industries.html">Defence industries contracting & support services</a></li>
+              </ul>
+            </div>
+
+            <!-- RIGHT COLUMN -->
+            <div class="dropdown-right">
+              <ul>
+                <li><i class="icon">🛡️</i> Security Operations Center (SOC)</li>
+                <li><i class="icon">🏛️</i> Vulnerability Assessment & Penetration Testing (VAPT)</li>
+                <li><i class="icon">💻</i> CISO as a Service</li>
+                <li><i class="icon">⚡</i> Incident Response</li>
+                <li><i class="icon">🎓</i> Deus Cautela Cybersecurity Internship Programme</li>
+                <li><i class="icon">📖</i> Cybersecurity Awareness Program</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <li><a href="services.html">Services</a></li>
+        <li><a href="license.html" class="active">Licenses</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" class="btn-primary" style="color:#dce9f9; background-color: rgb(12, 71, 197); border-radius: 20px;" >Partner with us</a></li>
+      </ul>
+    </nav>
+   
+<section class="info-bar">
+  <div class="info-container">
+   
+    <div class="info-item">
+      <i class="fas fa-dollar-sign"></i>
+      <span>USD/NGN:</span>
+      <strong>₦1,540.25</strong>
+    </div>
+
+    
+    <div class="info-item">
+      <i class="fas fa-chart-line"></i>
+      <span>Stock:</span>
+      <strong>+2.3%</strong>
+    </div>
+
+  
+    <div class="info-item">
+      <i class="fas fa-cloud-sun"></i>
+      <span>Lagos:</span>
+      <strong>30°C ☀️</strong>
+    </div>
+
+    
+    <div class="info-item">
+      <i class="fas fa-clock"></i>
+      <span>Local Time:</span>
+      <strong id="time"></strong>
+    </div>
+  </div>
+</section>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content" data-aos="fade-up">
+      <h2>Leadership</h2>
+      <p>Meet the seasoned professionals driving Deus Cautela Limited towards excellence and security innovation.</p>
+    </div>
+  </section>
+
+  <section class="section" id="board">
+    <h2 data-aos="fade-down">Board of Directors</h2>
+    <div class="leaders">
+      <div class="leader-card" data-aos="zoom-in">
+        <img src="clem.png" alt="Clem Nwogbo">
+        <h3>Dr. Clem Nwogbo</h3>
+        <p>Chairman/CEO</p>
+        <p>Dr. Clem Nwogbo
+MBA, MNIM
+Over 30 years professional working experience.
+CEO/MD, M-P
+Infrastructure (9 years).
+Managing Director - Mast Projects (9 years).
+COO - Interkel Networks
+National Productivity Order
+of Merit (NPOM).</p>
+      </div>
+      <div class="leader-card" data-aos="zoom-in">
+        <img src="okaro.png" alt="CP Chief Columbus Emeka Okaro">
+        <h3>CP Chief Columbus Emeka Okaro (Rtd)</h3>
+        <p>Director</p>
+      </div>
+      <div class="leader-card" data-aos="zoom-in">
+        <img src="jude.png" alt="Engr. Jude Iorember">
+        <h3>Engr. Jude Iorember</h3>
+        <p>Managing Director</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="management">
+    <h2 data-aos="fade-up">Management Team</h2>
+    <div class="leaders">
+      <div class="leader-card" data-aos="flip-left">
+        <img src="ops.png" alt="Francis Adulugba">
+        <h3>Francis Adulugba</h3>
+        <p>Head of Operations</p>
+      </div>
+      <div class="leader-card" data-aos="flip-left">
+        <img src="prince.png" alt="Prince">
+        <h3> Prince Martins</h3>
+        <p>Regional Manager (South East)</p>
+      </div>
+      <div class="leader-card" data-aos="flip-left">
+        <img src="training.png" alt="Training Manager">
+        <h3>Training Manager</h3>
+        <p>Oversees personnel development & skill enhancement</p>
+      </div>
+      <div class="leader-card" data-aos="flip-left">
+        <img src="quality.png" alt="Quality Assurance">
+        <h3>Quality Assurance Manager</h3>
+        <p>Ensures service excellence & compliance</p>
+      </div>
+      <div class="leader-card" data-aos="flip-left">
+        <img src="bdm.png" alt="Business Development">
+        <h3>Business Development Manager</h3>
+        <p>Client relationship management & expansion</p>
+      </div>
+    </div>
+  </section>
+
+
+    <section class="security-perks" id="security-perks">
+  <div class="container">
+    <h2 class="section-title">Why <span>Professional Security</span> Matters</h2>
+    <p class="section-subtitle">
+      In today’s world, safety isn’t optional—it’s essential. Partnering with 
+      trusted professionals means peace of mind, stronger resilience, and 
+      protection for what matters most.
+    </p>
+
+    <div class="perks-grid">
+      <!-- Card 1 -->
+      <div class="perk-card fade-up">
+        <i class="fas fa-shield-alt"></i>
+        <h3>24/7 Peace of Mind</h3>
+        <p>
+          Trained experts and advanced systems safeguard your assets 
+          around the clock, so you focus on growth, not risks.
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="perk-card fade-up delay-1">
+        <i class="fas fa-user-secret"></i>
+        <h3>Proven Expertise</h3>
+        <p>
+          Our professionals bring decades of field experience and 
+          industry certifications, ensuring unmatched reliability.
+        </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="perk-card fade-up delay-2">
+        <i class="fas fa-lock"></i>
+        <h3>Cutting-Edge Technology</h3>
+        <p>
+          From smart surveillance to cyber defense, we integrate the 
+          latest tech to keep threats one step behind.
+        </p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="perk-card fade-up delay-3">
+        <i class="fas fa-globe"></i>
+        <h3>Global Standards</h3>
+        <p>
+          Our operations follow international security protocols, giving 
+          you confidence anywhere, anytime.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  
+
+  
+
+<section class="testimonials-section">
+  <div class="container">
+    <h2 class="section-title">A Decade of Experience, Protecting Lives and Property</h2>
+    <p class="section-subtitle">“Solution Driven”</p>
+
+    <div class="testimonials-grid">
+      
+     
+      <div class="testimonial-card slide-in">
+        <p class="testimonial-text">
+          "I have been working with <strong>Deus Cautela</strong> for the past five years, and I am continually impressed with their level of service. 
+          The staff is friendly and knowledgeable and always willing to help. 
+          In addition, the security solutions they offer are of the highest quality and have allowed me to expand my business in ways I never imagined. 
+          I highly recommend Deus Cautela to anyone looking for quality services."
+        </p>
+        <div class="testimonial-author">
+          <h4>Wilson Thai</h4>
+          <span>Ontario, Canada</span>
+        </div>
+      </div>
+
+      
+      <div class="testimonial-card slide-in">
+        <p class="testimonial-text">
+          "I have been using <strong>Deus Cautela</strong> for the past year and have been delighted with their services. 
+          The customer service is outstanding, and they have always gone above and beyond to meet my needs. 
+          Their security solutions are top-notch, and I have made my business more efficient because of their support. 
+          I highly recommend Deus Cautela!"
+        </p>
+        <div class="testimonial-author">
+          <h4>Chukwu Emeka</h4>
+          <span>Abuja, FCT</span>
+        </div>
+      </div>
+
+     
+      <div class="testimonial-card slide-in">
+        <p class="testimonial-text">
+          "I recently had the pleasure of working with <strong>Deus Cautela</strong>. 
+          I was blown away by the level of service and professionalism that the team provided. 
+          They delivered high-quality solutions and were always available to answer any questions. 
+          I highly recommend Deus Cautela to anyone looking for exceptional service and unmatched protection."
+        </p>
+        <div class="testimonial-author">
+          <h4>Jide Adams</h4>
+          <span>Lagos, Nigeria</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <footer>
+    <p>&copy; 2025 Deus Cautela Limited. All Rights Reserved.</p>
+    <p>Plot 25 Block 68, Durosimi Etti Drive, Off Admiralty Way, Lekki Phase, Lagos</p>
+    <p>Tel: +234-08037119392 | Email: <a href="mailto:jude@mpiafrica.com">jude@mpiafrica.com</a></p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
+    
+  function updateTime() {
+    const now = new Date();
+    document.getElementById("time").textContent = now.toLocaleTimeString();
+  }
+  setInterval(updateTime, 1000);
+  updateTime();
+
+
+
+
+async function loadSecurityNews() {
+  try {
+    let res = await fetch("https://gnews.io/api/v4/search?q=security&token=YOUR_API_KEY&lang=en");
+    let data = await res.json();
+    let track = document.querySelector(".news-track");
+    track.innerHTML = data.articles.map(a => `<span>📰 ${a.title}</span>`).join("");
+  } catch (err) {
+    console.log("Error loading news:", err);
+  }
+}
+loadSecurityNews();
+setInterval(loadSecurityNews, 100000); 
+
+
+  </script>
+  <script>AOS.init({duration: 1200, once: false});
+document.addEventListener("scroll", function() {
+  const cards = document.querySelectorAll(".testimonial-card");
+  const triggerBottom = window.innerHeight * 0.85;
+
+  cards.forEach(card => {
+    const boxTop = card.getBoundingClientRect().top;
+    if(boxTop < triggerBottom) {
+      card.classList.add("show");
+    }
+  });
+});
+
+  </script>
+</body>
+</html>

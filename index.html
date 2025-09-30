@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Deus Cautela Limited</title>
+  <link rel="stylesheet" href="styles.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <link rel="icon" type="image/png" href="logo.png">
+
+</head>
+<script>
+  window.addEventListener('scroll', () => {
+    const header = document.querySelector('.site-header');
+    if (window.scrollY > 50) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
+</script>
+
+<body>
+  <header class="site-header">
+    <nav class="navbar">
+      <div class="logo">
+        <img src="logo.png" alt="Deus Cautela Limited Logo">
+        <span class="company-name">Deus Cautela Limited</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+
+        <li class="dropdown">
+          <a href="#leadership" class="dropbtn">Leadership ▾</a>
+          <ul class="dropdown-content">
+            <li><a href="whoweare.html">Who We Are</a></li>
+            <li><a href="leadership.html">Leadership</a></li>
+            <li><a href=".html#clients">Our Clients</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropbtn">Our Security Solutions ▾</a>
+          <div class="mega-dropdown">
+            <div class="dropdown-left">
+              <h3>Our Security Solutions</h3>
+              <hr class="yellow-line">
+              <ul>
+                <li><a href="security-technologies.html">Security Technologies / IOT</a></li>
+                <li><a href="physical-security.html">Physical security & Mobility</a></li>
+                <li><a href="identity-risk.html">Identity risk solutions & outsourcing</a></li>
+                <li><a href="security-education.html">Security education</a></li>
+                <li><a href="security-advisory.html">Security risk advisory & consultancy</a></li>
+                <li><a href="defence-industries.html">Defence industries contracting & support services</a></li>
+              </ul>
+            </div>
+
+           
+            <div class="dropdown-right">
+              <ul>
+                <li><i class="icon">🛡️</i> Security Operations Center (SOC)</li>
+                <li><i class="icon">🏛️</i> Vulnerability Assessment & Penetration Testing (VAPT)</li>
+                <li><i class="icon">💻</i> CISO as a Service</li>
+                <li><i class="icon">⚡</i> Incident Response</li>
+                <li><i class="icon">🎓</i> Deus Cautela Cybersecurity Internship Programme</li>
+                <li><i class="icon">📖</i> Cybersecurity Awareness Program</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <li><a href="services.html">Services</a></li>
+        <li><a href="license.html" class="active">Licenses</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" class="btn-primary" style="color:#dce9f9; background-color: rgb(12, 71, 197); border-radius: 20px;" >Partner with us</a></li>
+      </ul>
+    </nav>
+  
+<div class="news-rotator">
+  <div class="news-track">
+    <span>🔴 Nigeria: Heightened border security measures in Abuja.</span>
+    <span>🟠 USA: Increased cyber threat alerts reported.</span>
+    <span>🟢 UK: New CCTV legislation for public areas enforced.</span>
+    <span>🔴 Kenya: Rising cases of armed robbery in Nairobi suburbs.</span>
+    <span>🟠 UAE: Stricter regulations for private security firms.</span>
+    <span>🔴 Nigeria: Heightened border security measures in Abuja.</span>
+    <span>🟠 USA: Increased cyber threat alerts reported.</span>
+    <span>🟢 UK: New CCTV legislation for public areas enforced.</span>
+    <span>🔴 Kenya: Rising cases of armed robbery in Nairobi suburbs.</span>
+    <span>🟠 UAE: Stricter regulations for private security firms.</span>
+    <span>🔴 Nigeria: Heightened border security measures in Abuja.</span>
+    <span>🟠 USA: Increased cyber threat alerts reported.</span>
+    <span>🟢 UK: New CCTV legislation for public areas enforced.</span>
+    <span>🔴 Kenya: Rising cases of armed robbery in Nairobi suburbs.</span>
+    <span>🟠 UAE: Stricter regulations for private security firms.</span>
+  </div>
+</div>
+    
+   
+<section class="info-bar">
+  <div class="info-container">
+   
+    <div class="info-item">
+      <i class="fas fa-dollar-sign"></i>
+      <span>USD/NGN:</span>
+      <strong>₦1,540.25</strong>
+    </div>
+
+    
+    <div class="info-item">
+      <i class="fas fa-chart-line"></i>
+      <span>Stock:</span>
+      <strong>+2.3%</strong>
+    </div>
+
+  
+    <div class="info-item">
+      <i class="fas fa-cloud-sun"></i>
+      <span>Lagos:</span>
+      <strong>30°C ☀️</strong>
+    </div>
+
+    
+    <div class="info-item">
+      <i class="fas fa-clock"></i>
+      <span>Local Time:</span>
+      <strong id="time"></strong>
+    </div>
+  </div>
+</section>
+  </header>
+  
+<section class="hero-slider">
+  <div class="bg current"></div>
+  <div class="bg next"></div>
+  <div class="hero-content">
+    <h1 id="hero-header"></h1>
+    <p id="hero-para"></p>
+    <div class="hero-buttons">
+      <a href="services.html" class="btn-primary">Our Services</a>
+      <a href="contact.html" class="btn-secondary">Request a Quote</a>
+    </div>
+    <div class="hero-stats">
+      <div ><strong>1000+</strong><br>Clients Served</div>
+      <div ><strong>500+</strong><br>Personnel</div>
+      <div ><strong>50+</strong><br>Regions Covered</div>
+    </div>
+  </div>
+</section>
+
+<section class="logo-rotator">
+  <div class="slide-track">
+    <div class="slide"><img src="csc.png" alt="Client Logo"></div>
+    <div class="slide"><img src="IHS.png" alt="Client Logo"></div>
+    <div class="slide"><img src="MPI.png" alt="Client Logo"></div>
+    <div class="slide"><img src="HUAWEI.png" alt="Client Logo"></div>
+    <div class="slide"><img src="infravision.png" alt="Client Logo"></div>
+    <div class="slide"><img src="ATC.png" alt="Client Logo"></div>
+    <div class="slide"><img src="CAC.png" alt="Client Logo"></div>
+    
+     <div class="slide"><img src="csc.png" alt="Client Logo"></div>
+    <div class="slide"><img src="IHS.png" alt="Client Logo"></div>
+    <div class="slide"><img src="MPI.png" alt="Client Logo"></div>
+    <div class="slide"><img src="HUAWEI.png" alt="Client Logo"></div>
+    <div class="slide"><img src="infravision.png" alt="Client Logo"></div>
+    <div class="slide"><img src="ATC.png" alt="Client Logo"></div>
+    <div class="slide"><img src="CAC.png" alt="Client Logo"></div>
+  </div>
+</section>
+<section class="brand-section">
+  <div class="brand-header">
+    <div class="brand-tag">Behind the Brand</div>
+    <h2>
+      The Minds, Machines & Mission <br>
+      Behind <span>Deus Cautela Ltd</span>
+    </h2>
+    <p>
+      Deus Cautela Ltd Provide first class security by making use 
+      of modern technologies and professional applications. Trusted for 8+ years across sectors and borders.
+    </p>
+  </div>
+
+  <div class="brand-grid">
+    <div class="brand-card">
+      <img src="security.png" alt="Oil Rig">
+      <div class="card-text">
+        <h3>Engineering Protection Across African Countries</h3>
+        <p>
+          Delivering critical Security since 2017 across Nigeria, Ghana, Rwanda, 
+          and beyond. Active in 7+ African countries with regional offices and 
+          large-scale projects.
+        </p>
+      </div>
+    </div>
+
+    <div class="brand-card center">
+      <h2>8+</h2>
+      <p>Years of Impact</p>
+    </div>
+
+    <div class="brand-card overlay">
+      <img src="CSS.png" alt="Solar Project">
+      <div class="overlay-text">
+        <p>...Securing Africa <br> For A Confident Future</p>
+      </div>
+    </div>
+
+    <div class="brand-card span-2">
+      <h3>A Legacy, Trusted by the Best</h3>
+      <p>
+        Trusted by industry leaders including UNDP, UNICEF, DFID, Guinness Nigeria, 
+        IHS Towers, and Nigerian Breweries, we are a financially stable organization 
+        with over $74 million in revenue generated over the past five years.
+      </p>
+      <a href="contact.html" class="brand-link">Partner With Us →</a>
+    </div>
+  </div>
+</section>
+
+<section class="premium-services" id="premium-services"> 
+  <div class="container">
+    <h2 class="section-title">
+      Our <span>Elite Services</span>
+    </h2>
+    <p class="section-subtitle">
+      At Deus Cautela Limited, we deliver world-class private security solutions,
+      safeguarding businesses, assets, and lives with integrity and expertise.
+    </p>
+
+    <div class="premium-services-grid">
+      <div class="premium-card" data-animate="left">
+        <div class="card-image">
+          <img src="CCTV.png" alt="Surveillance Systems">
+        </div>
+        <div class="card-content">
+          <span class="tag">1000+ Systems Deployed</span>
+          <h3>Surveillance & CCTV</h3>
+          <p>Advanced monitoring solutions, access control, and real-time threat detection.</p>
+        </div>
+      </div>
+
+      <div class="premium-card" data-animate="bottom">
+        <div class="card-image">
+          <img src="gallant.jpg" alt="Manned Guarding">
+        </div>
+        <div class="card-content">
+          <span class="tag">500+ Guards</span>
+          <h3>Manned Guarding</h3>
+          <p>Professional, trained security officers ensuring safety for businesses & residences.</p>
+        </div>
+      </div>
+
+      <div class="premium-card" data-animate="right">
+        <div class="card-image">
+          <img src="patrolvan.jpg" alt="Mobile Patrols">
+        </div>
+        <div class="card-content">
+          <span class="tag">24/7 Coverage</span>
+          <h3>Mobile Patrols</h3>
+          <p>Rapid-response patrol units covering wide areas with efficiency and visibility.</p>
+        </div>
+      </div>
+
+      <div class="premium-card" data-animate="left">
+        <div class="card-image">
+          <img src="guardsinvan.jpg" alt="Armored Transport">
+        </div>
+        <div class="card-content">
+          <span class="tag">200+ Safe Transports</span>
+          <h3>Armored Transport</h3>
+          <p>Secure transportation of valuables and sensitive materials with full escort services.</p>
+        </div>
+      </div>
+
+      <div class="premium-card" data-animate="bottom">
+        <div class="card-image">
+          <img src="cybersecurity2.png" alt="Cybersecurity">
+        </div>
+        <div class="card-content">
+          <span class="tag">Digital Shield</span>
+          <h3>Cybersecurity</h3>
+          <p>Protecting digital infrastructure from threats with cutting-edge security measures.</p>
+        </div>
+      </div>
+
+      <div class="premium-card" data-animate="right">
+        <div class="card-image">
+          <img src="welltrainedguards.jpg" alt="Risk Consulting">
+        </div>
+        <div class="card-content">
+          <span class="tag">Trusted Advisors</span>
+          <h3>Risk Consulting</h3>
+          <p>Expert advice on mitigating risks and strengthening organizational resilience.</p>
+        </div>
+      </div>
+
+<div class="premium-card" data-animate="right">
+        <div class="card-image">
+          <img src="patrolvan.jpg" alt="Mobile Patrols">
+        </div>
+        <div class="card-content">
+          <span class="tag">24/7 Coverage</span>
+          <h3>Mobile Patrols</h3>
+          <p>Rapid-response patrol units covering wide areas with efficiency and visibility.</p>
+        </div>
+      </div>
+
+      <div class="premium-card" data-animate="left">
+        <div class="card-image">
+          <img src="guardsinvan.jpg" alt="Armored Transport">
+        </div>
+        <div class="card-content">
+          <span class="tag">200+ Safe Transports</span>
+          <h3>Armored Transport</h3>
+          <p>Secure transportation of valuables and sensitive materials with full escort services.</p>
+        </div>
+      </div>
+
+      <div class="premium-card" data-animate="bottom">
+        <div class="card-image">
+          <img src="secure3.png" alt="Adequate Monitoring System">
+        </div>
+        <div class="card-content">
+          <span class="tag">Digital Shield</span>
+          <h3>Adequate Monitoring System</h3>
+          <p>Protecting digital infrastructure from threats with cutting-edge security measures.</p>
+        </div>
+      </div>
+
+ <div class="premium-card" data-animate="left">
+        <div class="card-image">
+          <img src="CCTV.png" alt="Surveillance Systems">
+        </div>
+        <div class="card-content">
+          <span class="tag">1000+ Systems Deployed</span>
+          <h3>Surveillance & CCTV</h3>
+          <p>Advanced monitoring solutions, access control, and real-time threat detection.</p>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+
+
+
+<section id="africa-services">
+  <div class="africa-container">
+    <div class="africa-tag">Across Africa</div>
+    <h2 class="africa-title">Our <span>Services</span> Across <span>Africa</span></h2>
+    <p class="africa-subtext">
+      Delivering excellence and innovation to clients in every corner of the continent.  
+      From concept to completion, we bring world-class solutions tailored for Africa’s unique opportunities.
+    </p>
+
+    <div class="africa-service-grid">
+      
+      <!-- Card 1 -->
+      <div class="africa-card" style="background-image: url('CSS.png');" data-aos="fade-up">
+        <div class="africa-card-content">
+          <h3>Corporate Security</h3>
+          <p class="africa-short">Business security with zero downtime.</p>
+          <div class="africa-more">
+            <p>Customized security solutions to protect assets, staff, and facilities seamlessly.</p>
+            <a href="contact.html" class="africa-btn">Request a Quote</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="africa-card" style="background-image: url('telecom.png');" data-aos="fade-up" data-aos-delay="100">
+        <div class="africa-card-content">
+          <h3>Infrastructural Security</h3>
+          <p class="africa-short">Securing telecom & utilities.</p>
+          <div class="africa-more">
+            <p>Protection for critical infrastructure like BTS towers and power systems across the continent.</p>
+            <a href="contact.html" class="africa-btn">Request a Quote</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="africa-card" style="background-image: url('consultant.png');" data-aos="fade-up" data-aos-delay="200">
+        <div class="africa-card-content">
+          <h3>Business Consulting</h3>
+          <p class="africa-short">Insights for growth.</p>
+          <div class="africa-more">
+            <p>We provide growth-driven strategies for companies navigating African markets.</p>
+            <a href="contact.html" class="africa-btn">Request a Quote</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="africa-card" style="background-image: url('guardsontrainng.jpg');" data-aos="fade-up" data-aos-delay="300">
+        <div class="africa-card-content">
+          <h3>Specialized Training</h3>
+          <p class="africa-short">Workforce development.</p>
+          <div class="africa-more">
+            <p>Upskilling teams for operational excellence in Africa's growing industries.</p>
+            <a href="contact.html" class="africa-btn">Request a Quote</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<style>
+#africa-services {
+  background: #fff;
+  padding: 100px 20px;
+  color: #0e206b;
+ 
+}
+
+.africa-container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.africa-tag {
+  display: inline-block;
+  padding: 6px 16px;
+  font-size: 12px;
+  background: rgba(0, 196, 204, 0.1);
+  color: #007a87;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.africa-title {
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+.africa-title span {
+    color: #007a87;
+}
+.africa-subtext {
+  font-size: 18px;
+  color: #555;
+  max-width: 750px;
+  margin: 0 auto 60px;
+  line-height: 1.6;
+}
+
+.africa-service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.africa-card {
+  position: relative;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease;
+  cursor: pointer;
+}
+.africa-card:hover {
+  transform: translateY(-10px);
+}
+
+.africa-card-content {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.85);
+  transition: all 0.4s ease;
+}
+
+.africa-card-content h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #007a87;
+  margin-bottom: 6px;
+}
+
+.africa-short {
+  font-size: 14px;
+  color: #444;
+}
+
+.africa-more {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.africa-card:hover .africa-card-content {
+  background: rgba(255, 255, 255, 0.97);
+}
+.africa-card:hover .africa-more {
+  max-height: 200px;
+  opacity: 1;
+  margin-top: 12px;
+}
+
+.africa-btn {
+  margin-top: 12px;
+  display: inline-block;
+  padding: 10px 22px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #00c4cc, #007a87);
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+.africa-btn:hover {
+  background: linear-gradient(135deg, #007a87, #00c4cc);
+}
+</style>
+
+
+
+
+
+
+<section class="logo-rotator">
+  <div class="slide-track">
+    <div class="slide"><img src="csc.png" alt="Client Logo"></div>
+    <div class="slide"><img src="IHS.png" alt="Client Logo"></div>
+    <div class="slide"><img src="MPI.png" alt="Client Logo"></div>
+    <div class="slide"><img src="HUAWEI.png" alt="Client Logo"></div>
+    <div class="slide"><img src="infravision.png" alt="Client Logo"></div>
+    <div class="slide"><img src="ATC.png" alt="Client Logo"></div>
+    <div class="slide"><img src="CAC.png" alt="Client Logo"></div>
+ 
+     <div class="slide"><img src="csc.png" alt="Client Logo"></div>
+    <div class="slide"><img src="IHS.png" alt="Client Logo"></div>
+    <div class="slide"><img src="MPI.png" alt="Client Logo"></div>
+    <div class="slide"><img src="HUAWEI.png" alt="Client Logo"></div>
+    <div class="slide"><img src="infravision.png" alt="Client Logo"></div>
+    <div class="slide"><img src="ATC.png" alt="Client Logo"></div>
+    <div class="slide"><img src="CAC.png" alt="Client Logo"></div>
+  </div>
+</section>
+
+</section>
+  
+<section class="testimonials-section">
+  <div class="container">
+    <h5 class="section-title">A Decade of Experience, Protecting Lives and Property</h5>
+    <p class="section-subtitle">“Solution Driven”</p>
+
+    <div class="testimonials-grid">
+      
+      <div class="testimonial-card slide-in">
+        <p class="testimonial-text">
+          "I have been working with <strong>Deus Cautela</strong> for the past five years, and I am continually impressed with their level of service. 
+          The staff is friendly and knowledgeable and always willing to help. 
+          In addition, the security solutions they offer are of the highest quality and have allowed me to expand my business in ways I never imagined. 
+          I highly recommend Deus Cautela to anyone looking for quality services."
+        </p>
+        <div class="testimonial-author">
+          <h4>Wilson Thai</h4>
+          <span>Ontario, Canada</span>
+        </div>
+      </div>
+
+      <div class="testimonial-card slide-in">
+        <p class="testimonial-text">
+          "I have been using <strong>Deus Cautela</strong> for the past year and have been delighted with their services. 
+          The customer service is outstanding, and they have always gone above and beyond to meet my needs. 
+          Their security solutions are top-notch, and I have made my business more efficient because of their support. 
+          I highly recommend Deus Cautela!"
+        </p>
+        <div class="testimonial-author">
+          <h4>Chukwu Emeka</h4>
+          <span>Abuja, FCT</span>
+        </div>
+      </div>
+
+      <div class="testimonial-card slide-in">
+        <p class="testimonial-text">
+          "I recently had the pleasure of working with <strong>Deus Cautela</strong>. 
+          I was blown away by the level of service and professionalism that the team provided. 
+          They delivered high-quality solutions and were always available to answer any questions. 
+          I highly recommend Deus Cautela to anyone looking for exceptional service and unmatched protection."
+        </p>
+        <div class="testimonial-author">
+          <h4>Jide Adams</h4>
+          <span>Lagos, Nigeria</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="services-africa">
+  <div class="container">
+    <h2 class="section-title">REGIONS</h2>
+    <div class="services-grid">
+      
+      <div class="service-card-special">
+        <div class="icon-circle">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <h3>Nigeria</h3>
+        <p>Anambara - Second Gate Unizik Agu Awka Anambara state.<br>
+          <br>
+        Lagos- Plot 25 Block 68 Bisola Durossimi etti drive lekki phase 1.</p>
+      </div>
+
+      <div class="service-card-special">
+        <div class="icon-circle">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <h3>Ghana</h3>
+        <p>Advanced protective services for corporate and private clients. 
+        </p>
+      </div>
+
+      <div class="service-card-special">
+        <div class="icon-circle">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <h3>South Africa</h3>
+        <p>Surveillance, executive protection, and risk assessment solutions.</p>
+      </div>
+
+      <div class="service-card-special">
+        <div class="icon-circle">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <h3>Kenya</h3>
+        <p>Customized security solutions with 24/7 monitoring.</p>
+      </div>
+
+      <div class="service-card-special">
+        <div class="icon-circle">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <h3>Egypt</h3>
+        <p>Integrated technology-based security across key cities.</p>
+      </div>
+
+      <div class="service-card-special">
+        <div class="icon-circle">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <h3>Morocco</h3>
+        <p>Specialized security for high-profile events and operations.</p>
+      </div>
+
+      <div class="service-card-special">
+        <div class="icon-circle">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <h3>Uganda</h3>
+        <p>Patrol, rapid response, and crisis management services.</p>
+      </div>
+
+      <div class="service-card-special">
+        <div class="icon-circle">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <h3>Tanzania</h3>
+        <p>End-to-end protection for businesses and government entities.</p>
+      </div>
+
+       <div class="service-card-special">
+        <div class="icon-circle">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <h3>Ethiopia</h3>
+        <p>Integrated technology-based security across key cities.</p>
+      </div>
+
+      <div class="service-card-special">
+        <div class="icon-circle">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <h3>Zimbabuwe</h3>
+        <p>Specialized security for high-profile events and operations.</p>
+      </div>
+
+      <div class="service-card-special">
+        <div class="icon-circle">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <h3>Dr Congo</h3>
+        <p>Patrol, rapid response, and crisis management services.</p>
+      </div>
+
+      <div class="service-card-special">
+        <div class="icon-circle">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <h3>Mozambique</h3>
+        <p>End-to-end protection for businesses and government entities.</p>
+      </div>
+
+
+<style>
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 35px;
+  position: relative;
+  z-index: 1;
+}
+
+.service-card-special {
+  background: #fff;
+  padding: 40px 25px;
+  border-radius: 18px;
+  box-shadow: 0px 15px 40px rgba(0,0,0,0.08);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  transform: translateY(30px);
+  opacity: 0;
+  animation: fadeUp 1s ease forwards;
+}
+
+.service-card-special:nth-child(1) { animation-delay: 0.3s; }
+.service-card-special:nth-child(2) { animation-delay: 0.5s; }
+.service-card-special:nth-child(3) { animation-delay: 0.7s; }
+.service-card-special:nth-child(4) { animation-delay: 0.9s; }
+
+.service-card-special::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(135deg, rgba(255,107,0,0.1), rgba(43,46,131,0.1));
+  transform: rotate(25deg);
+  transition: opacity 0.5s ease;
+  opacity: 0;
+}
+.service-card-special:hover::before {
+  opacity: 0;
+  color:  #007a87;
+}
+
+.service-card-special:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0px 20px 50px rgba(0,0,0,0.15);
+}
+
+.icon-wrapper {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #007a87,  #007a87);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px rgba(49, 67, 167, 0.4);
+  animation: pulse 2.5s infinite;
+}
+.icon-wrapper img {
+  width: 75px;
+  height: 75px;
+  border-radius: 40px;
+}
+
+
+.service-card-special h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #007a87;
+  margin-bottom: 12px;
+}
+
+
+.service-card-special p {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+
+.btn-quote {
+  display: inline-block;
+  padding: 12px 28px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 30px;
+  background: linear-gradient(135deg,  #007a87,  #007a87);
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.35s ease;
+}
+.btn-quote:hover {
+  background: linear-gradient(135deg, #007a87,  #007a87);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(43,46,131,0.25);
+}
+
+
+@keyframes fadeUp {
+  0% { transform: translateY(40px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+@keyframes fadeDown {
+  0% { transform: translateY(-40px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+</style>
+
+
+    </div>
+  </div>
+</section>
+
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  
+
+   <section class="security-perks" id="security-perks">
+  <div class="container">
+    <h2 class="section-title">Why <span>Professional Security</span> Matters</h2>
+    <p class="section-subtitle">
+      In today’s world, safety isn’t optional—it’s essential. Partnering with 
+      trusted professionals means peace of mind, stronger resilience, and 
+      protection for what matters most.
+    </p>
+
+    <div class="perks-grid">
+      
+      <div class="perk-card fade-up">
+        <i class="fas fa-shield-alt"></i>
+        <h3>24/7 Peace of Mind</h3>
+        <p>
+          Trained experts and advanced systems safeguard your assets 
+          around the clock, so you focus on growth, not risks.
+        </p>
+      </div>
+
+  
+      <div class="perk-card fade-up delay-1">
+        <i class="fas fa-user-secret"></i>
+        <h3>Proven Expertise</h3>
+        <p>
+          Our professionals bring decades of field experience and 
+          industry certifications, ensuring unmatched reliability.
+        </p>
+      </div>
+
+     
+      <div class="perk-card fade-up delay-2">
+        <i class="fas fa-lock"></i>
+        <h3>Cutting-Edge Technology</h3>
+        <p>
+          From smart surveillance to cyber defense, we integrate the 
+          latest tech to keep threats one step behind.
+        </p>
+      </div>
+
+      <div class="perk-card fade-up delay-3">
+        <i class="fas fa-globe"></i>
+        <h3>Global Standards</h3>
+        <p>
+          Our operations follow international security protocols, giving 
+          you confidence anywhere, anytime.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="about-snapshot scroll-animate">
+  <h2>Why Choose Deus Cautela?</h2>
+  <p>Since 2015 (RC 1303572), we’ve delivered modern, compliant security services, combining technology with highly trained professionals across West Africa.</p>
+  <a href="about.html" class="btn-outline">Learn More</a>
+</section>
+
+<section class="testimonials scroll-animate">
+  <h2>Trusted By</h2>
+  <div class="client-logos">
+    <img src="infravision.png" alt="Infravision">
+    <img src="MPI.png" alt="MPI Limited">
+    <img src="amc.png" alt="Anambra Millennium City">
+     <img src="IHS.png" alt="Infravision">
+    <img src="NEC.png" alt="MPI Limited">
+    <img src="ATC.png" alt="Anambra Millennium City">
+     <img src="HUAWEI.png" alt="Anambra Millennium City">
+  </div>
+</section>
+
+
+  <footer class="footer">
+  <div class="footer-container">
+
+   
+    <div class="footer-brand">
+      <img src="logo.png" alt="Deus Cautela Security" class="footer-logo">
+      <p class="footer-tagline">Protecting lives & property for over A Decade.</p>
+    </div>
+
+  
+    <div class="footer-sections">
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Leadership</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">News & Press</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#">Corporate Security</a></li>
+          <li><a href="#">CCTV & Monitoring</a></li>
+          <li><a href="#">Telecom Infrastructure</a></li>
+          <li><a href="#">Risk Management</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Case Studies</a></li>
+          <li><a href="#">White Papers</a></li>
+          <li><a href="#">FAQs</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>📍 Lagos, Nigeria</p>
+        <p>☎ +234 800-123-4567</p>
+        <p>✉ info@Deus Cautela.com</p>
+        <div class="social-icons">
+          <a href="#"><img src="fb.png" alt="Facebook"></a>
+          <a href="#"><img src="tw.png" alt="Twitter"></a>
+          <a href="#"><img src="in.png" alt="LinkedIn"></a>
+          <a href="#"><img src="ig.png" alt="Instagram"></a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="newsletter">
+      <h4>Stay Updated</h4>
+      <p>Subscribe to our newsletter for security insights & updates.</p>
+      <form>
+        <input type="email" placeholder="Enter your email" required>
+        <button class="cta-footer">Subscribe</button>
+      </form>
+    </div>
+
+  
+    <div class="certifications">
+      <span>Certified by:</span>
+      <img src="iso.png" alt="ISO Certified">
+      <img src="MPI.png" alt="Partner Logo">
+      <img src="CAC.png" alt="Awards">
+    </div>
+
+ 
+    <div class="footer-bottom">
+      <p>© 2025 Deuscautela Security. All Rights Reserved.</p>
+      <div class="quick-links">
+        <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+  <script src="slider.js"></script>
+</body>
+</html>

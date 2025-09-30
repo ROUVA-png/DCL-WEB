@@ -1,0 +1,1463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About Us — Deus Cautela Limited</title>
+
+  <!-- Replace with your preferred webfont if desired -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <meta name="description" content="Deus Cautela Limited — licensed private security firm (RC:1303572). Industrial & commercial security solutions across Nigeria & West Africa." />
+
+  <!-- JSON-LD Organization (update if you have different URLs or phone) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Deus Cautela Limited",
+    "url": "https://www.deuscautela.com",
+    "logo": "https://www.deuscautela.com/logo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+2348037119392",
+      "contactType": "customer service",
+      "email": "jude@mpiafrica.com"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Plot 25 Block 68, Durosimi Etti Drive, Off Admiralty Way Lekki Phase, Lagos",
+      "addressCountry": "NG"
+    }
+  }
+  </script>
+
+  <style>
+
+
+    :root{
+      --primary:#005b96;     /* medium blue */
+      --dark:#003f7d;        /* deep navy */
+      --accent:#e6f0fa;      /* light blue */
+      --muted:#6b7b8c;
+      --white:#ffffff;
+      --radius:10px;
+      --max-width:1150px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+      background:#f8fbff;
+      color:var(--dark);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+    }
+
+   /* Header and Navigation */
+/* Header defaults to transparent */
+       
+.site-header {
+  background-color: transparent;
+  position: fixed;
+  width: 101%;
+  top: 0;
+  z-index: 100;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.site-header.scrolled {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: saturate(180%) blur(10px); 
+}
+
+/* ===== Info Bar Styles ===== */
+.info-bar {
+  background: #fff;
+  color: #100220;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 0;
+  border-bottom: 2px solid #1d009e;
+  position: relative;
+  z-index: 1000;
+  height: 50px;
+}
+
+.info-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: transform 0.3s ease;
+}
+
+.info-item:hover {
+  transform: translateY(-2px);
+  color: #ffb400;
+}
+
+.info-item i {
+  color: #ffb400;
+  font-size: 16px;
+}
+
+
+/* ============ NAVBAR ============ */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;               /* Make navbar stretch full width */
+  padding: 0 40px;           /* Add spacing left & right */
+  background-color: white; /* Set header/nav background */
+  box-sizing: border-box;
+}
+
+/* Nav-links container */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 0.1em;
+  padding-right: 80px;
+  margin: 0;
+  align-items: center;
+}
+
+.nav-links a {
+  display: inline-block;       
+  padding: 8px 32px;           
+  text-decoration: none;
+  color: #003f7d;
+  font-weight: 500;
+  border-radius: 5px;          
+  transition: background 0.2s, color 0.2s;
+  font-weight: 600;
+}
+
+.nav-links a:hover {
+  background-color: #e6f0fa;   
+  color: blueviolet;              
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 80px;
+  width: auto;
+  margin-right: 1.75em;
+  padding-left: 40px;
+  padding-top: 10px;
+}
+
+.company-name {
+  font-size: 1.2em;
+  font-weight:bolder;
+  color: #003f7d;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Dropdown basics */
+.dropdown {
+  position: relative;
+  z-index:1500;
+}
+
+.dropbtn {
+  text-decoration: none;
+  font-weight: bold;
+  color: #fff;
+  padding: 10px;
+}
+
+/* Dropdown menu */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  min-width: 200px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  border-radius: 6px;
+  z-index: 99;
+}
+
+.dropdown-content li {
+  list-style: none;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 12px 16px;
+  color: #003f7d;
+}
+
+.dropdown-content a:hover {
+  background: #f2f8ff;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Mega dropdown container */
+/* Mega dropdown container */
+.mega-dropdown {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  box-sizing: border-box;
+
+  position: absolute;
+  top: 100%; /* directly under parent link */
+  left: 0;
+  background: #f4f6fb;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  border-radius: 10px;
+  width: max-content;
+  min-width: 600px;
+  z-index: 2000;
+
+  /* Animation states */
+  opacity: 0;
+  transform: translateY(15px); /* start slightly lower */
+  visibility: hidden;
+  pointer-events: none;
+
+  transition: opacity 0.35s ease, transform 0.35s ease, visibility 0.35s ease;
+}
+
+/* Show mega dropdown on hover */
+.dropdown:hover .mega-dropdown {
+  opacity: 1;
+  transform: translateY(0); /* slide into place */
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .mega-dropdown {
+    grid-template-columns: 1fr;
+    min-width: 100%; /* take full width */
+    position: static;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 15px;
+    transform: none;
+  }
+}
+
+/* Mega dropdown left column */
+.dropdown-left h3 {
+  font-size: 18px;
+  margin: 0;
+  color: #2b2e83;
+}
+
+.yellow-line {
+  width: 80%;
+  height: 4px;
+  background: #001aff;
+  border: none;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+.dropdown-left ul {
+  list-style: none;
+  padding: 0;
+}
+
+.dropdown-left ul li {
+  margin: 10px 0;
+}
+
+.dropdown-left ul li a {
+  text-decoration: none;
+  color: #2b2e83;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.dropdown-left ul li a:hover {
+  color: #ff6b00;
+}
+
+/* Mega dropdown right column */
+.dropdown-right ul {
+  list-style: none;
+  padding: 0;
+}
+
+.dropdown-right li {
+  margin: 12px 0;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  color: #333;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown-right li:hover {
+  color: #ff6b00;
+  transform: translateX(5px);
+}
+
+.dropdown-right .icon {
+  margin-right: 10px;
+  font-size: 18px;
+  color: #ffb400;
+}
+
+.hero {
+  height: 76vh;
+  min-height: 360px;
+  display: grid;
+  place-items: center;
+  position: relative;
+  overflow: hidden;
+  color: var(--white);
+}
+
+/* Background image with fade/zoom animation */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+ background: linear-gradient(rgba(11, 26, 48, 0.85), rgba(11, 26, 48, 0.85)),
+              url("tech2.png") no-repeat center center/cover;
+  z-index: 0;
+  transform: scale(1.2);
+  opacity: 0;
+  animation: heroBgIn 1.8s ease forwards;
+}
+
+/* Dark overlay */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  z-index: 1;
+  opacity: 0;
+  animation: overlayFade 2s ease forwards;
+}
+
+/* Text container with slide/fade animation */
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 24px;
+  max-width: 1100px;
+  margin: auto;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: heroTextIn 1.6s ease forwards 0.8s;
+}
+
+/* KEYFRAMES */
+@keyframes heroBgIn {
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes overlayFade {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes heroTextIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+.testimonials-section {
+  background: #0d0d0d;
+  color: #fff;
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.testimonials-section h5 {
+  background: #0d0d0d;
+  color: #fff;
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.testimonial-card {
+  background: rgba(255,255,255,0.05);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+  transform: translateX(150px);
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.testimonial-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #eee;
+}
+
+.testimonial-author h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #00bcd4;
+}
+
+.testimonial-author span {
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+/* Slide-in Active State */
+.testimonial-card.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+
+
+
+.security-perks {
+  background: linear-gradient(135deg, #0a0f1c, #1a2235);
+  padding: 100px 20px;
+  color: #e0e6f0;
+  text-align: center;
+}
+
+.security-perks .section-title {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.security-perks .section-title span {
+  color: #00bfff;
+}
+
+.security-perks .section-subtitle {
+  max-width: 700px;
+  margin: 0 auto 50px;
+  font-size: 1.1rem;
+  color: #bfc6d4;
+}
+
+.perks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.perk-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 30px 20px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.perk-card i {
+  font-size: 2.5rem;
+  color: #00bfff;
+  margin-bottom: 20px;
+}
+
+.perk-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+.perk-card p {
+  color: #c9d1e5;
+  font-size: 0.95rem;
+}
+
+/* Hover effect */
+.perk-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 12px 35px rgba(0, 191, 255, 0.3);
+}
+
+/* Fade-up animation */
+.fade-up {
+  animation: fadeUp 1s forwards;
+}
+
+.fade-up.delay-1 { animation-delay: 0.3s; }
+.fade-up.delay-2 { animation-delay: 0.6s; }
+.fade-up.delay-3 { animation-delay: 0.9s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+    .hero h1{
+      margin:0;
+      font-size:clamp(1.6rem,2.6vw,2.6rem);
+      letter-spacing:0.4px;
+      line-height:1.05;
+      font-weight:700;
+      color:var(--white);
+      text-shadow: 0 8px 30px rgba(0,0,0,0.35);
+    }
+    .hero p.lead{
+      margin:12px auto 18px;
+      color:rgba(255,255,255,0.92);
+      font-size:1.05rem;
+      max-width:760px;
+    }
+    .btn-primary{
+      display:inline-block;
+      background:var(--white);
+      color:var(--primary);
+      padding:10px 18px;
+      border-radius:8px;
+      font-weight:700;
+      text-decoration:none;
+      box-shadow: 0 8px 20px rgba(3,63,125,0.12);
+      transition:transform .18s ease, box-shadow .18s ease;
+    }
+    .btn-primary:hover{ transform:translateY(-3px); box-shadow:0 14px 30px rgba(3,63,125,0.18) }
+
+    /* MAIN CONTENT CONTAINER */
+    .container{
+      max-width:var(--max-width);
+      margin:28px auto;
+      padding:0 20px 80px;
+    }
+
+    /* QUICK FACTS (counters) */
+    .facts{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+      gap:18px;
+      margin-top:-40px;
+    }
+    .fact{
+      background:var(--white);
+      padding:18px;
+      border-radius:12px;
+      box-shadow:0 10px 24px rgba(11,57,105,0.04);
+      text-align:center;
+    }
+    .fact .num{
+      font-size:1.5rem;
+      color:var(--primary);
+      font-weight:700;
+    }
+    .fact p{ margin:6px 0 0; color:var(--muted); font-size:0.95rem }
+
+    /* ABOUT SNAPSHOT */
+    .about-snapshot{
+      display:grid;
+      grid-template-columns: 1fr 360px;
+      gap:28px;
+      margin-top:28px;
+      align-items:start;
+    }
+    .about-card{
+      background:var(--white);
+      padding:22px;
+      border-radius:12px;
+      box-shadow:0 12px 28px rgba(11,57,105,0.04);
+    }
+    .about-card h2{ margin:0 0 8px; color:var(--dark) }
+    .about-card p{ color:var(--muted); line-height:1.6 }
+
+    .side-cta{
+      background: linear-gradient(180deg,var(--accent),#f2f8ff);
+      padding:20px;
+      border-radius:12px;
+      text-align:center;
+    }
+    .side-cta .small{ color:var(--muted); font-size:0.95rem }
+    .side-cta .big{ margin-top:10px; font-weight:700; color:var(--primary) }
+
+    /* ACCORDION (dropdowns) */
+    .accordion{
+      margin-top:28px;
+      display:grid;
+      gap:12px;
+    }
+    .acc-item{
+      background:var(--white);
+      border-radius:12px;
+      overflow:hidden;
+      box-shadow:0 8px 20px rgba(11,57,105,0.04);
+    }
+    .acc-header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      padding:16px 18px;
+      cursor:pointer;
+      border:none;
+      background:transparent;
+      width:100%;
+      text-align:left;
+    }
+    .acc-header h3{ font-size:1.05rem; margin:0; color:var(--primary) }
+    .chev{ width:20px; height:20px; transition: transform .28s ease; color:var(--muted) }
+
+    .acc-body{
+      padding:0 18px;
+      max-height:0;
+      overflow:hidden;
+      transition: max-height .36s ease;
+      background:linear-gradient(180deg,#fbfdff,#ffffff);
+    }
+    .acc-body .inner{ padding:16px 0 22px; color:var(--muted); line-height:1.6 }
+
+    /* BOARD GRID */
+    .board-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:16px;
+      margin-top:14px;
+    }
+    .board-card{
+      background:linear-gradient(180deg,#ffffff,#f7fbff);
+      border-radius:10px;
+      padding:14px;
+      display:flex;
+      gap:12px;
+      align-items:center;
+      box-shadow:0 8px 14px rgba(3,63,125,0.04);
+    }
+    .board-card img{
+      width:64px;
+      height:64px;
+      border-radius:8px;
+      object-fit:cover;
+      box-shadow:0 8px 20px rgba(0,0,0,0.06);
+    }
+    .board-meta h4{ margin:0; font-size:1rem; color:var(--dark) }
+    .board-meta p{ margin:4px 0 0; color:var(--muted); font-size:0.9rem }
+
+    /* ORG STRUCTURE (simple) */
+    .org-chart{ margin-top:18px; background:var(--white); padding:18px; border-radius:10px; box-shadow:0 10px 24px rgba(3,63,125,0.04) }
+    .org-levels{display:flex; gap:18px; flex-wrap:wrap; justify-content:space-between}
+    .org-level{ flex:1 1 180px; background:#f6fbff; padding:12px; border-radius:8px; text-align:center; color:var(--dark) }
+
+    /* CTA BANNER */
+    .cta-banner{
+      margin-top:28px;
+      background:linear-gradient(90deg,var(--primary),#083a66);
+      color:var(--white);
+      padding:22px;
+      border-radius:12px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:16px;
+    }
+    .cta-banner .left h3{ margin:0; font-size:1.05rem }
+    .cta-banner .left p{ margin:6px 0 0; color:rgba(255,255,255,0.92) }
+    .cta-banner .right a{ text-decoration:none; padding:10px 16px; background:var(--white); color:var(--primary); border-radius:8px; font-weight:700 }
+
+
+    @media (max-width:920px){
+      .about-snapshot{ grid-template-columns: 1fr; }
+      .hero{ height:50vh }
+      .navlinks{ gap:14px }
+      .brand img{ height:48px }
+      .navwrap{ padding:12px }
+    }
+
+
+    
+.footer {
+  background: linear-gradient(to bottom, #f2f8ff, #dce9f9);
+  padding: 60px 20px;
+  color: #003f7d;
+  font-size: 0.95rem;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-brand {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.footer-logo { height: 70px; }
+
+.footer-sections {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin-bottom: 40px;
+}
+
+.footer-col h4 {
+  margin-bottom: 14px;
+  color: #005b96;
+  font-size: 1.1rem;
+}
+.footer-col ul { list-style: none; padding: 0; }
+.footer-col a { 
+  color: #003f7d; 
+  text-decoration: none; 
+  display: block;
+  margin-bottom: 6px;
+  transition: color 0.3s;
+}
+.footer-col a:hover { color: #005b96; }
+
+.social-icons { display: flex; gap: 12px; margin-top: 12px; }
+.social-icons img { height: 20px; filter: grayscale(100%); transition: filter 0.3s; }
+.social-icons img:hover { filter: grayscale(0%); }
+
+.newsletter {
+  text-align: center;
+  margin: 40px 0;
+}
+.newsletter h4 { color: #005b96; }
+.newsletter input {
+  padding: 10px;
+  border: 1px solid #cfe2f3;
+  border-radius: 6px;
+  margin-right: 8px;
+  width: 250px;
+}
+.newsletter button {
+  background: #005b96;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 18px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.2s;
+}
+.newsletter button:hover { transform: translateY(-3px); }
+
+.certifications {
+  text-align: center;
+  margin: 30px 0;
+}
+.certifications img {
+  height: 40px;
+  margin: 0 10px;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+.certifications img:hover { opacity: 1; }
+
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #cfe2f3;
+  padding-top: 20px;
+  font-size: 0.85rem;
+}
+.footer-bottom .quick-links a {
+  color: #003f7d;
+  text-decoration: none;
+  margin: 0 6px;
+}
+.footer-bottom .quick-links a:hover { text-decoration: underline; }
+
+@media (max-width: 700px) {
+  .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+  .newsletter input { width: 100%; margin-bottom: 10px; }
+}
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+    <nav class="navbar">
+      <div class="logo">
+        <img src="logo.png" alt="Deus Cautela Limited Logo">
+        <span class="company-name">Deus Cautela Limited</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+
+        <!-- Leadership Dropdown -->
+        <li class="dropdown">
+          <a href="#leadership" class="dropbtn">Leadership ▾</a>
+          <ul class="dropdown-content">
+            <li><a href="whoweare.html">Who We Are</a></li>
+            <li><a href="leadership.html">Leadership</a></li>
+            <li><a href=".html#clients">Our Clients</a></li>
+          </ul>
+        </li>
+
+        <!-- Cyber Security Service Mega Dropdown -->
+        <li class="dropdown">
+          <a href="#" class="dropbtn">Our Security Solutions ▾</a>
+          <div class="mega-dropdown">
+            <!-- LEFT COLUMN -->
+            <div class="dropdown-left">
+              <h3>Our Security Solutions</h3>
+              <hr class="yellow-line">
+              <ul>
+                <li><a href="security-technologies.html">Security Technologies / IOT</a></li>
+                <li><a href="physical-security.html">Physical security & Mobility</a></li>
+                <li><a href="identity-risk.html">Identity risk solutions & outsourcing</a></li>
+                <li><a href="security-education.html">Security education</a></li>
+                <li><a href="security-advisory.html">Security risk advisory & consultancy</a></li>
+                <li><a href="defence-industries.html">Defence industries contracting & support services</a></li>
+              </ul>
+            </div>
+
+            <!-- RIGHT COLUMN -->
+            <div class="dropdown-right">
+              <ul>
+                <li><i class="icon">🛡️</i> Security Operations Center (SOC)</li>
+                <li><i class="icon">🏛️</i> Vulnerability Assessment & Penetration Testing (VAPT)</li>
+                <li><i class="icon">💻</i> CISO as a Service</li>
+                <li><i class="icon">⚡</i> Incident Response</li>
+                <li><i class="icon">🎓</i> Deus Cautela Cybersecurity Internship Programme</li>
+                <li><i class="icon">📖</i> Cybersecurity Awareness Program</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <li><a href="services.html">Services</a></li>
+        <li><a href="license.html" class="active">Licenses</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" class="btn-primary" style="color:#dce9f9; background-color: rgb(12, 71, 197); border-radius: 20px;" >Partner with us</a></li>
+      </ul>
+    </nav>
+   
+<section class="info-bar">
+  <div class="info-container">
+   
+    <div class="info-item">
+      <i class="fas fa-dollar-sign"></i>
+      <span>USD/NGN:</span>
+      <strong>₦1,540.25</strong>
+    </div>
+
+    
+    <div class="info-item">
+      <i class="fas fa-chart-line"></i>
+      <span>Stock:</span>
+      <strong>+2.3%</strong>
+    </div>
+
+  
+    <div class="info-item">
+      <i class="fas fa-cloud-sun"></i>
+      <span>Lagos:</span>
+      <strong>30°C ☀️</strong>
+    </div>
+
+    
+    <div class="info-item">
+      <i class="fas fa-clock"></i>
+      <span>Local Time:</span>
+      <strong id="time"></strong>
+    </div>
+  </div>
+</section>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" role="img" aria-label="Security services hero image">
+    <div class="hero-inner">
+      <h1>About  Us</h1>
+      <p class="lead">A licensed private security firm delivering industrial & commercial security solutions across Nigeria & the West African sub-region through professional teams and modern technology.</p>
+      <a class="btn-primary" href="services.html">Explore Our Services</a>
+    </div>
+  </section>
+  
+
+  <!-- MAIN CONTENT -->
+  <main class="container" role="main">
+
+    <!-- Quick facts / counters -->
+    <div class="facts" aria-hidden="false">
+      <div class="fact">
+        <div class="num" data-target="2015">2015</div>
+        <p>Established</p>
+      </div>
+      <div class="fact">
+        <div class="num" data-target="500">500+</div>
+        <p>Personnel (est.)</p>
+      </div>
+      <div class="fact">
+        <div class="num" data-target="10">10+</div>
+        <p>Regional Coverage (zones)</p>
+      </div>
+      <div class="fact">
+        <div class="num" data-target="1000">1000+</div>
+        <p>Clients Served (incl. partners)</p>
+      </div>
+    </div>
+
+<!-- Uniform Formation Gallery -->
+<section aria-label="Our Teams in action" style="margin-top:32px;">
+  <h2 style="color:var(--primary)">Our Team in Action</h2>
+  <div style="display:flex;overflow-x:auto;gap:12px;padding:18px 0;">
+    <img src="gallant.jpg" alt="Security team formation" style="flex:0 0 auto;height:160px;border-radius:8px;">
+    <img src="guardsinvan.jpg" alt="Patrol formation" style="flex:0 0 auto;height:160px;border-radius:8px;">
+    <img src="guardsontrainng.jpg" alt="Field team drill" style="flex:0 0 auto;height:160px;border-radius:8px;">
+  </div>
+</section>
+
+<!-- Portrait Row -->
+<section aria-label="Leadership Team" style="margin-top:24px;">
+  <h2 style="color:var(--primary)">Executive Portraits</h2>
+  <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:12px;">
+    <div style="flex:1 1 180px;text-align:center;">
+      <img src="clem.png" alt="Chairman/CEO" style="width:100%;max-width:120px;border-radius:50%;box-shadow:0 8px 20px rgba(0,0,0,0.05);">
+      <h4 style="margin:8px 0 0;color:var(--dark)">Mr. Clem Nwogbo</h4>
+      <p style="color:var(--muted);font-size:0.95rem">Chairman / CEO</p>
+    </div>
+    <!-- Add other leadership portraits similarly -->
+  </div>
+</section>
+
+<!-- History Timeline Accordion Entry -->
+<article class="acc-item" style="margin-top:24px;">
+  <button class="acc-header" aria-expanded="false" aria-controls="panel-history">
+    <h3>Our History & Milestones</h3>
+    <svg class="chev" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#6b7b8c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <div id="panel-history" class="acc-body">
+    <div class="inner">
+      <ul style="list-style:circle inside; color:var(--muted);">
+        <li><strong>2015:</strong> DCL founded and CAC-licensed</li>
+        <li><strong>2017:</strong> Introduced electronic security services</li>
+        <li><strong>2020:</strong> Expanded into West African regional support</li>
+        <li><strong>2023:</strong> First anniversary of national branch structure</li>
+      </ul>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- About snapshot + CTA column -->
+    <div class="about-snapshot">
+      <div class="about-card">
+        <h2>Who We Are</h2>
+        <p><strong>Deus Cautela Limited (DCL)</strong> is a licensed and registered private security firm (RC: 1303572), established in December 2015. Driven by a seasoned board and management team with decades of combined experience, we provide comprehensive security services—uniformed guards, executive protection, electronic security, and training—tailored to industrial and commercial clients.</p>
+
+        <h3 style="margin-top:16px;color:var(--primary)">Mission & Vision</h3>
+        <p><strong>Vision:</strong> To be one of the best commercial / Industrial / Personnel security services companies in nigeria, and to be a reference point for others in the industry, both in africa
+          and the rest of the world while holding onto our "Operation Performance excellence"</p>
+          
+        <p><strong>Mission:</strong> To provide security services at the level that allows our clients to go about their activities and business with peace of mind and in a climate of safety
+          while achieving their business objectives. </p>
+      </div>
+
+      <aside class="side-cta">
+        <div class="small">Licensed & Compliant</div>
+        <div class="big">RC: 1303572</div>
+        <p style="margin:10px 0 0;color:var(--muted)">Interested in tailored security? We handle site surveys, risk assessments and bespoke contracts.</p>
+        <a href="contact.html" class="btn-primary" style="margin-top:12px;display:inline-block">Request a Proposal</a>
+      </aside>
+    </div>
+
+    <!-- Accordion dropdowns -->
+    <section class="accordion" aria-label="Company details">
+      <!-- Vision & Core Values -->
+      <article class="acc-item">
+        <button class="acc-header" aria-expanded="false" aria-controls="panel-vision">
+          <h3>Vision, Mission & Core Values</h3>
+          <svg class="chev" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="#6b7b8c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div id="panel-vision" class="acc-body" role="region" aria-labelledby="panel-vision">
+          <div class="inner">
+            <p><strong>Vision:</strong> To render first-class professional security services using trained personnel to clients in Nigeria and the West African sub-region.</p>
+            <p><strong>Mission:</strong> To evolve a security organization that provides superior security services using modern technology, scientifically-based methods, and highly trained, motivated staff, while creating employment opportunities and maximizing stakeholders' investment.</p>
+            <h4 style="color:var(--primary); margin-top:12px">Core Values</h4>
+            <p>Competency • Responsiveness • Quality • Integrity • Politeness • Proactivity • Excellence • Supervision • Effectiveness • Conformance</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Board & Management -->
+      <article class="acc-item">
+        <button class="acc-header" aria-expanded="false" aria-controls="panel-board">
+          <h3>Board of Directors & Management</h3>
+          <svg class="chev" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="#6b7b8c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div id="panel-board" class="acc-body" role="region" aria-labelledby="panel-board">
+          <div class="inner">
+            <p>Leadership and governance are central to DCL’s operations. Our board and senior management combine decades of industry knowledge and operational experience to deliver consistent, compliant services.</p>
+
+            <div class="board-grid" aria-hidden="false">
+              <div class="board-card">
+                <img src="clem.png" alt="Clem Nwogbo — Chairman/CEO">
+                <div class="board-meta">
+                  <h4>Mr. Clem Nwogbo</h4>
+                  <p>Chairman / CEO</p>
+                </div>
+              </div>
+
+              <div class="board-card">
+                <img src="team2.jpg" alt="CP Columbus Okaro — Director">
+                <div class="board-meta">
+                  <h4>CP Chief Columbus Emeka Okaro (Rtd)</h4>
+                  <p>Director — Legal & Compliance</p>
+                </div>
+              </div>
+
+              <div class="board-card">
+                <img src="team3.jpg" alt="Engr Jude Iorember — Managing Director">
+                <div class="board-meta">
+                  <h4>Engr. Jude Iorember</h4>
+                  <p>Managing Director</p>
+                </div>
+              </div>
+
+              <div class="board-card">
+                <img src="team4.jpg" alt="Francis Adulugba — Head of Operations">
+                <div class="board-meta">
+                  <h4>Francis Adulugba</h4>
+                  <p>Head of Operations</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Organizational Structure -->
+      <article class="acc-item">
+        <button class="acc-header" aria-expanded="false" aria-controls="panel-structure">
+          <h3>Organizational Structure & Key Personnel</h3>
+          <svg class="chev" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="#6b7b8c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div id="panel-structure" class="acc-body" role="region" aria-labelledby="panel-structure">
+          <div class="inner">
+            <p>DCL operates a layered national structure (National → Regional → Zonal → Area → Cluster). Key roles include General Manager, Operations Manager, Training Manager, Quality Assurance Manager, Business Development, HR, Admin, Accounts, Field Officers, Patrol Supervisors and Static Guards.</p>
+
+            <div class="org-chart" aria-hidden="false">
+              <div class="org-levels">
+                <div class="org-level"><strong>Board/CEO</strong></div>
+                <div class="org-level"><strong>Managing Director</strong></div>
+                <div class="org-level"><strong>Operations & Training</strong></div>
+                <div class="org-level"><strong>Regional / Zonal Managers</strong></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Training & Development -->
+      <article class="acc-item">
+        <button class="acc-header" aria-expanded="false" aria-controls="panel-training">
+          <h3>Training & Development</h3>
+          <svg class="chev" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="#6b7b8c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div id="panel-training" class="acc-body" role="region" aria-labelledby="panel-training">
+          <div class="inner">
+            <ul>
+              <li>Regular retraining programs and refresher courses.</li>
+              <li>Client-site custom training and induction programs.</li>
+              <li>Courses in counter-terrorism, surveillance and modern security operations.</li>
+              <li>Partnerships with public security agencies for certification and drills.</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- Technology / Services -->
+      <article class="acc-item">
+        <button class="acc-header" aria-expanded="false" aria-controls="panel-tech">
+          <h3>Technology Integration & Services</h3>
+          <svg class="chev" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="#6b7b8c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div id="panel-tech" class="acc-body" role="region" aria-labelledby="panel-tech">
+          <div class="inner">
+            <p>We offer integrated electronic security: CCTV installation & maintenance, electric perimeter fencing, access control, alarms, metal detectors and real-time monitoring solutions. Our patrol management and communications systems enable proactive supervision across zonal structures.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Clientele & Insurance -->
+      <article class="acc-item">
+        <button class="acc-header" aria-expanded="false" aria-controls="panel-client">
+          <h3>Clientele & Insurance Policies</h3>
+          <svg class="chev" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="#6b7b8c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div id="panel-client" class="acc-body" role="region" aria-labelledby="panel-client">
+          <div class="inner">
+            <p>Our valued clients include Infravision Limited, MPI Limited and Anambra Millennium City (AMC), among others. DCL maintains comprehensive insurance policies to cover operational liabilities and protect clients and staff.</p>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- CTA Banner -->
+    <div class="cta-banner" role="region" aria-label="contact call to action">
+      <div class="left">
+        <h3>Need a bespoke security solution?</h3>
+        <p>Contact our Business Development team for a site assessment and tailored proposal.</p>
+      </div>
+      <div class="right">
+        <a href="contact.html">Get in touch</a>
+      </div>
+    </div>
+
+  </main>
+
+  <section class="security-perks" id="security-perks">
+  <div class="container">
+    <h2 class="section-title">Why <span>Professional Security</span> Matters</h2>
+    <p class="section-subtitle">
+      In today’s world, safety isn’t optional—it’s essential. Partnering with 
+      trusted professionals means peace of mind, stronger resilience, and 
+      protection for what matters most.
+    </p>
+
+    <div class="perks-grid">
+      <!-- Card 1 -->
+      <div class="perk-card fade-up">
+        <i class="fas fa-shield-alt"></i>
+        <h3>24/7 Peace of Mind</h3>
+        <p>
+          Trained experts and advanced systems safeguard your assets 
+          around the clock, so you focus on growth, not risks.
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="perk-card fade-up delay-1">
+        <i class="fas fa-user-secret"></i>
+        <h3>Proven Expertise</h3>
+        <p>
+          Our professionals bring decades of field experience and 
+          industry certifications, ensuring unmatched reliability.
+        </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="perk-card fade-up delay-2">
+        <i class="fas fa-lock"></i>
+        <h3>Cutting-Edge Technology</h3>
+        <p>
+          From smart surveillance to cyber defense, we integrate the 
+          latest tech to keep threats one step behind.
+        </p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="perk-card fade-up delay-3">
+        <i class="fas fa-globe"></i>
+        <h3>Global Standards</h3>
+        <p>
+          Our operations follow international security protocols, giving 
+          you confidence anywhere, anytime.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  
+
+  
+
+<section class="testimonials-section">
+  <div class="container">
+    <h2 class="section-title">A Decade of Experience, Protecting Lives and Property</h2>
+    <p class="section-subtitle">“Solution Driven”</p>
+
+    <div class="testimonials-grid">
+      
+     
+      <div class="testimonial-card slide-in">
+        <p class="testimonial-text">
+          "I have been working with <strong>Deus Cautela</strong> for the past five years, and I am continually impressed with their level of service. 
+          The staff is friendly and knowledgeable and always willing to help. 
+          In addition, the security solutions they offer are of the highest quality and have allowed me to expand my business in ways I never imagined. 
+          I highly recommend Deus Cautela to anyone looking for quality services."
+        </p>
+        <div class="testimonial-author">
+          <h4>Wilson Thai</h4>
+          <span>Ontario, Canada</span>
+        </div>
+      </div>
+
+      
+      <div class="testimonial-card slide-in">
+        <p class="testimonial-text">
+          "I have been using <strong>Deus Cautela</strong> for the past year and have been delighted with their services. 
+          The customer service is outstanding, and they have always gone above and beyond to meet my needs. 
+          Their security solutions are top-notch, and I have made my business more efficient because of their support. 
+          I highly recommend Deus Cautela!"
+        </p>
+        <div class="testimonial-author">
+          <h4>Chukwu Emeka</h4>
+          <span>Abuja, FCT</span>
+        </div>
+      </div>
+
+     
+      <div class="testimonial-card slide-in">
+        <p class="testimonial-text">
+          "I recently had the pleasure of working with <strong>Deus Cautela</strong>. 
+          I was blown away by the level of service and professionalism that the team provided. 
+          They delivered high-quality solutions and were always available to answer any questions. 
+          I highly recommend Deus Cautela to anyone looking for exceptional service and unmatched protection."
+        </p>
+        <div class="testimonial-author">
+          <h4>Jide Adams</h4>
+          <span>Lagos, Nigeria</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <footer class="footer">
+  <div class="footer-container">
+
+   
+    <div class="footer-brand">
+      <img src="logo.png" alt="Deus Cautela Security" class="footer-logo">
+      <p class="footer-tagline">Protecting lives & property for over A Decade.</p>
+    </div>
+
+  
+    <div class="footer-sections">
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Leadership</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">News & Press</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#">Corporate Security</a></li>
+          <li><a href="#">CCTV & Monitoring</a></li>
+          <li><a href="#">Telecom Infrastructure</a></li>
+          <li><a href="#">Risk Management</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Case Studies</a></li>
+          <li><a href="#">White Papers</a></li>
+          <li><a href="#">FAQs</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>📍 Lagos, Nigeria</p>
+        <p>☎ +234 800-123-4567</p>
+        <p>✉ info@Deus Cautela.com</p>
+        <div class="social-icons">
+          <a href="#"><img src="fb.png" alt="Facebook"></a>
+          <a href="#"><img src="tw.png" alt="Twitter"></a>
+          <a href="#"><img src="in.png" alt="LinkedIn"></a>
+          <a href="#"><img src="ig.png" alt="Instagram"></a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="newsletter">
+      <h4>Stay Updated</h4>
+      <p>Subscribe to our newsletter for security insights & updates.</p>
+      <form>
+        <input type="email" placeholder="Enter your email" required>
+        <button class="cta-footer">Subscribe</button>
+      </form>
+    </div>
+
+  
+    <div class="certifications">
+      <span>Certified by:</span>
+      <img src="iso.png" alt="ISO Certified">
+      <img src="MPI.png" alt="Partner Logo">
+      <img src="CAC.png" alt="Awards">
+    </div>
+
+ 
+    <div class="footer-bottom">
+      <p>© 2025 Deuscautela Security. All Rights Reserved.</p>
+      <div class="quick-links">
+        <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <!-- SCRIPTS: accordion, counters, small reveal animations -->
+  <script>
+    // Accessible accordion
+    document.querySelectorAll('.acc-header').forEach((btn, i) => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        const panel = document.getElementById(btn.getAttribute('aria-controls'));
+        // Toggle
+        btn.setAttribute('aria-expanded', String(!expanded));
+        if (!expanded){
+          // open
+          panel.style.maxHeight = panel.scrollHeight + 'px';
+          btn.querySelector('.chev').style.transform = 'rotate(180deg)';
+        } else {
+          // close
+          panel.style.maxHeight = null;
+          btn.querySelector('.chev').style.transform = 'rotate(0deg)';
+        }
+      });
+      // init: collapsed
+      const panel = document.getElementById(btn.getAttribute('aria-controls'));
+      panel.style.maxHeight = null;
+    });
+
+    // Animate counters when in view
+    const counters = document.querySelectorAll('.num[data-target]');
+    const counterObserver = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const target = Number(el.getAttribute('data-target').toString().replace(/\D/g,'')) || 0;
+          const start = 0;
+          const duration = 1200;
+          let startTime = null;
+          function step(ts) {
+            if (!startTime) startTime = ts;
+            const progress = Math.min((ts - startTime) / duration, 1);
+            const value = Math.floor(progress * target);
+            // Keep formatting if target contains non-digit (like 2015 or 500+)
+            if (el.getAttribute('data-target').includes('+')) {
+              el.textContent = value + '+';
+            } else {
+              el.textContent = value;
+            }
+            if (progress < 1) requestAnimationFrame(step);
+          }
+          requestAnimationFrame(step);
+          obs.unobserve(el);
+        }
+      });
+    }, { threshold: 0.3 });
+
+    counters.forEach(c => counterObserver.observe(c));
+
+    // Small reveal for inner elements (progressive polish)
+    const reveal = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.style.transition = 'opacity .6s ease, transform .6s ease';
+          e.target.style.opacity = 1;
+          e.target.style.transform = 'translateY(0)';
+          reveal.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.about-card, .board-card, .side-cta, .acc-item').forEach(el => {
+      el.style.opacity = 0;
+      el.style.transform = 'translateY(14px)';
+      reveal.observe(el);
+    });
+
+
+  function updateTime() {
+    const now = new Date();
+    document.getElementById("time").textContent = now.toLocaleTimeString();
+  }
+  setInterval(updateTime, 1000);
+  updateTime();
+
+
+
+
+async function loadSecurityNews() {
+  try {
+    let res = await fetch("https://gnews.io/api/v4/search?q=security&token=YOUR_API_KEY&lang=en");
+    let data = await res.json();
+    let track = document.querySelector(".news-track");
+    track.innerHTML = data.articles.map(a => `<span>📰 ${a.title}</span>`).join("");
+  } catch (err) {
+    console.log("Error loading news:", err);
+  }
+}
+loadSecurityNews();
+setInterval(loadSecurityNews, 100000); 
+
+
+//TESTIMONIALS
+document.addEventListener("scroll", function() {
+  const cards = document.querySelectorAll(".testimonial-card");
+  const triggerBottom = window.innerHeight * 0.85;
+
+  cards.forEach(card => {
+    const boxTop = card.getBoundingClientRect().top;
+    if(boxTop < triggerBottom) {
+      card.classList.add("show");
+    }
+  });
+});
+
+
+  </script>
+</body>
+</html>

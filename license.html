@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Licenses & Certifications | Deus Cautela</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<STYLE>
+
+.site-header {
+  background-color: transparent;
+  position: fixed;
+  width: 101%;
+  top: 0;
+  z-index: 100;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.site-header.scrolled {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: saturate(180%) blur(10px); 
+}
+
+
+.info-bar {
+  background: #fff;
+  color: #100220;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 0;
+  border-bottom: 2px solid #1d009e;
+  position: relative;
+  z-index: 1000;
+  height: 50px;
+}
+
+.info-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: transform 0.3s ease;
+}
+
+.info-item:hover {
+  transform: translateY(-2px);
+  color: #ffb400;
+}
+
+.info-item i {
+  color: #ffb400;
+  font-size: 16px;
+}
+
+
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;               
+  padding: 0 40px;           
+  background-color: white; 
+  box-sizing: border-box;
+}
+
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 0.1em;
+  padding-right: 80px;
+  margin: 0;
+  align-items: center;
+}
+
+.nav-links a {
+  display: inline-block;       
+  padding: 8px 32px;           
+  text-decoration: none;
+  color: #003f7d;
+  font-weight: 500;
+  border-radius: 5px;          
+  transition: background 0.2s, color 0.2s;
+  font-weight: 600;
+}
+
+.nav-links a:hover {
+  background-color: #e6f0fa;   
+  color: blueviolet;              
+}
+
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 80px;
+  width: auto;
+  margin-right: 1.75em;
+  padding-left: 40px;
+  padding-top: 10px;
+}
+
+.company-name {
+  font-size: 1.2em;
+  font-weight:bolder;
+  color: #003f7d;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Dropdown basics */
+.dropdown {
+  position: relative;
+  z-index: 2000;
+}
+
+.dropbtn {
+  text-decoration: none;
+  font-weight: bold;
+  color: #fff;
+  padding: 10px;
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  min-width: 200px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  border-radius: 6px;
+  z-index: 99;
+}
+
+.dropdown-content li {
+  list-style: none;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 12px 16px;
+  color: #003f7d;
+}
+
+.dropdown-content a:hover {
+  background: #f2f8ff;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+.mega-dropdown {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  box-sizing: border-box;
+
+  position: absolute;
+  top: 100%; 
+  left: 0;
+  background: #f4f6fb;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  border-radius: 10px;
+  width: max-content;
+  min-width: 600px;
+  z-index: 2000;
+
+  
+  opacity: 0;
+  transform: translateY(15px); 
+  visibility: hidden;
+  pointer-events: none;
+
+  transition: opacity 0.35s ease, transform 0.35s ease, visibility 0.35s ease;
+}
+
+
+.dropdown:hover .mega-dropdown {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+  pointer-events: auto;
+}
+
+
+@media (max-width: 900px) {
+  .mega-dropdown {
+    grid-template-columns: 1fr;
+    min-width: 100%; 
+    position: static;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 15px;
+    transform: none;
+  }
+}
+
+
+.dropdown-left h3 {
+  font-size: 18px;
+  margin: 0;
+  color: #2b2e83;
+}
+
+.yellow-line {
+  width: 80%;
+  height: 4px;
+  background: #001aff;
+  border: none;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+.dropdown-left ul {
+  list-style: none;
+  padding: 0;
+}
+
+.dropdown-left ul li {
+  margin: 10px 0;
+}
+
+.dropdown-left ul li a {
+  text-decoration: none;
+  color: #2b2e83;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.dropdown-left ul li a:hover {
+  color: #ff6b00;
+}
+
+
+.dropdown-right ul {
+  list-style: none;
+  padding: 0;
+}
+
+.dropdown-right li {
+  margin: 12px 0;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  color: #333;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown-right li:hover {
+  color: #ff6b00;
+  transform: translateX(5px);
+}
+
+.dropdown-right .icon {
+  margin-right: 10px;
+  font-size: 18px;
+  color: #ffb400;
+}
+
+
+   
+.hero-license {
+  position: relative;
+ background: linear-gradient(rgba(11, 26, 48, 0.85), rgba(11, 26, 48, 0.85)),
+              url('CAC.png') no-repeat center center/cover;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-license h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #f9c513;
+  margin-bottom: 15px;
+}
+
+.hero-license p {
+  font-size: 1.2rem;
+  color: #ddd;
+}
+
+
+.licenses {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #002244;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  max-width: 700px;
+  margin: auto;
+  color: #555;
+  margin-bottom: 50px;
+}
+
+
+.testimonials-section {
+  background: #0d0d0d;
+  color: #fff;
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.testimonials-section h5 {
+  background: #0d0d0d;
+  color: #fff;
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.testimonial-card {
+  background: rgba(255,255,255,0.05);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+  transform: translateX(150px);
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.testimonial-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #eee;
+}
+
+.testimonial-author h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #00bcd4;
+}
+
+.testimonial-author span {
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+
+.testimonial-card.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+
+
+
+.security-perks {
+  background: linear-gradient(135deg, #0a0f1c, #1a2235);
+  padding: 100px 20px;
+  color: #e0e6f0;
+  text-align: center;
+}
+
+.security-perks .section-title {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.security-perks .section-title span {
+  color: #00bfff;
+}
+
+.security-perks .section-subtitle {
+  max-width: 700px;
+  margin: 0 auto 50px;
+  font-size: 1.1rem;
+  color: #bfc6d4;
+}
+
+.perks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.perk-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 30px 20px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.perk-card i {
+  font-size: 2.5rem;
+  color: #00bfff;
+  margin-bottom: 20px;
+}
+
+.perk-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+.perk-card p {
+  color: #c9d1e5;
+  font-size: 0.95rem;
+}
+
+
+.perk-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 12px 35px rgba(0, 191, 255, 0.3);
+}
+
+
+.fade-up {
+  animation: fadeUp 1s forwards;
+}
+
+.fade-up.delay-1 { animation-delay: 0.3s; }
+.fade-up.delay-2 { animation-delay: 0.6s; }
+.fade-up.delay-3 { animation-delay: 0.9s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+.license-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.license-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transform: translateY(50px);
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+
+.license-card img {
+  max-height: 80px;
+  margin-bottom: 15px;
+}
+
+.license-card h3 {
+  font-size: 1.3rem;
+  color: #002244;
+  margin-bottom: 10px;
+}
+
+.license-card p {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+
+.license-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+
+.footer {
+  background: #002244;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 900px;
+  margin: auto;
+}
+
+.footer-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f9c513;
+  margin-bottom: 10px;
+}
+
+.socials {
+  margin-top: 15px;
+}
+
+.socials a {
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.socials img {
+  height: 22px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s;
+}
+
+.socials a:hover img {
+  transform: scale(1.2);
+}
+
+
+</STYLE>
+<body>
+  
+<header class="site-header">
+    <nav class="navbar">
+      <div class="logo">
+        <img src="logo.png" alt="Deus Cautela Limited Logo">
+        <span class="company-name">Deus Cautela Limited</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+
+        
+        <li class="dropdown">
+          <a href="#leadership" class="dropbtn">Leadership ▾</a>
+          <ul class="dropdown-content">
+            <li><a href="whoweare.html">Who We Are</a></li>
+            <li><a href="leadership.html">Leadership</a></li>
+            <li><a href=".html#clients">Our Clients</a></li>
+          </ul>
+        </li>
+
+        
+        <li class="dropdown">
+          <a href="#" class="dropbtn">Our Security Solutions ▾</a>
+          <div class="mega-dropdown">
+            
+            <div class="dropdown-left">
+              <h3>Our Security Solutions</h3>
+              <hr class="yellow-line">
+              <ul>
+                <li><a href="security-technologies.html">Security Technologies / IOT</a></li>
+                <li><a href="physical-security.html">Physical security & Mobility</a></li>
+                <li><a href="identity-risk.html">Identity risk solutions & outsourcing</a></li>
+                <li><a href="security-education.html">Security education</a></li>
+                <li><a href="security-advisory.html">Security risk advisory & consultancy</a></li>
+                <li><a href="defence-industries.html">Defence industries contracting & support services</a></li>
+              </ul>
+            </div>
+
+           
+            <div class="dropdown-right">
+              <ul>
+                <li><i class="icon">🛡️</i> Security Operations Center (SOC)</li>
+                <li><i class="icon">🏛️</i> Vulnerability Assessment & Penetration Testing (VAPT)</li>
+                <li><i class="icon">💻</i> CISO as a Service</li>
+                <li><i class="icon">⚡</i> Incident Response</li>
+                <li><i class="icon">🎓</i> Deus Cautela Cybersecurity Internship Programme</li>
+                <li><i class="icon">📖</i> Cybersecurity Awareness Program</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <li><a href="services.html">Services</a></li>
+        <li><a href="license.html" class="active">Licenses</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" class="btn-primary" style="color:#dce9f9; background-color: rgb(12, 71, 197); border-radius: 20px;" >Partner with us</a></li>
+      </ul>
+    </nav>
+   
+<section class="info-bar">
+  <div class="info-container">
+   
+    <div class="info-item">
+      <i class="fas fa-dollar-sign"></i>
+      <span>USD/NGN:</span>
+      <strong>₦1,540.25</strong>
+    </div>
+
+    
+    <div class="info-item">
+      <i class="fas fa-chart-line"></i>
+      <span>Stock:</span>
+      <strong>+2.3%</strong>
+    </div>
+
+  
+    <div class="info-item">
+      <i class="fas fa-cloud-sun"></i>
+      <span>Lagos:</span>
+      <strong>30°C ☀️</strong>
+    </div>
+
+    
+    <div class="info-item">
+      <i class="fas fa-clock"></i>
+      <span>Local Time:</span>
+      <strong id="time"></strong>
+    </div>
+  </div>
+</section>
+  </header>
+
+
+ 
+  <section class="hero-license">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 data-animate="fade-in">Licenses & Certifications</h1>
+      <p data-animate="slide-up">Recognized. Accredited. Trusted Worldwide.</p>
+    </div>
+  </section>
+
+  
+  <section class="licenses container">
+    <h2 class="section-title" data-animate="fade-in">Our Accreditations</h2>
+    <p class="section-subtitle" data-animate="slide-up">
+      Deus Cautela is proudly licensed and certified by top regulatory bodies, 
+      ensuring we deliver only the highest standards of security solutions.
+    </p>
+
+    <div class="license-grid">
+      
+      <div class="license-card" data-animate="zoom-in">
+        <img src="images/license1.png" alt="License One">
+        <h3>National Security License</h3>
+        <p>Approved by the Nigerian Security & Civil Defence Corps (NSCDC).</p>
+      </div>
+
+     
+      <div class="license-card" data-animate="zoom-in">
+        <img src="images/license2.png" alt="License Two">
+        <h3>ISO 9001:2015 Certification</h3>
+        <p>International quality management certification for excellence.</p>
+      </div>
+
+      
+      <div class="license-card" data-animate="zoom-in">
+        <img src="images/license3.png" alt="License Three">
+        <h3>Private Guard License</h3>
+        <p>Licensed to operate nationwide as a trusted security provider.</p>
+      </div>
+
+    
+      <div class="license-card" data-animate="zoom-in">
+        <img src="images/license4.png" alt="License Four">
+        <h3>Health & Safety Certification</h3>
+        <p>Compliant with occupational health and safety regulations.</p>
+      </div>
+    </div>
+  </section>
+
+
+
+    <section class="security-perks" id="security-perks">
+  <div class="container">
+    <h2 class="section-title">Why <span>Professional Security</span> Matters</h2>
+    <p class="section-subtitle">
+      In today’s world, safety isn’t optional—it’s essential. Partnering with 
+      trusted professionals means peace of mind, stronger resilience, and 
+      protection for what matters most.
+    </p>
+
+    <div class="perks-grid">
+      
+      <div class="perk-card fade-up">
+        <i class="fas fa-shield-alt"></i>
+        <h3>24/7 Peace of Mind</h3>
+        <p>
+          Trained experts and advanced systems safeguard your assets 
+          around the clock, so you focus on growth, not risks.
+        </p>
+      </div>
+
+     
+      <div class="perk-card fade-up delay-1">
+        <i class="fas fa-user-secret"></i>
+        <h3>Proven Expertise</h3>
+        <p>
+          Our professionals bring decades of field experience and 
+          industry certifications, ensuring unmatched reliability.
+        </p>
+      </div>
+
+    
+      <div class="perk-card fade-up delay-2">
+        <i class="fas fa-lock"></i>
+        <h3>Cutting-Edge Technology</h3>
+        <p>
+          From smart surveillance to cyber defense, we integrate the 
+          latest tech to keep threats one step behind.
+        </p>
+      </div>
+
+   
+      <div class="perk-card fade-up delay-3">
+        <i class="fas fa-globe"></i>
+        <h3>Global Standards</h3>
+        <p>
+          Our operations follow international security protocols, giving 
+          you confidence anywhere, anytime.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  
+
+  
+
+<section class="testimonials-section">
+  <div class="container">
+    <h2 class="section-title" style="color:white;">A Decade of Experience, Protecting Lives and Property</h2>
+    <p class="section-subtitle">“Solution Driven”</p>
+
+    <div class="testimonials-grid">
+      
+     
+      <div class="testimonial-card slide-in">
+        <p class="testimonial-text">
+          "I have been working with <strong>Deus Cautela</strong> for the past five years, and I am continually impressed with their level of service. 
+          The staff is friendly and knowledgeable and always willing to help. 
+          In addition, the security solutions they offer are of the highest quality and have allowed me to expand my business in ways I never imagined. 
+          I highly recommend Deus Cautela to anyone looking for quality services."
+        </p>
+        <div class="testimonial-author">
+          <h4>Wilson Thai</h4>
+          <span>Ontario, Canada</span>
+        </div>
+      </div>
+
+      
+      <div class="testimonial-card slide-in">
+        <p class="testimonial-text">
+          "I have been using <strong>Deus Cautela</strong> for the past year and have been delighted with their services. 
+          The customer service is outstanding, and they have always gone above and beyond to meet my needs. 
+          Their security solutions are top-notch, and I have made my business more efficient because of their support. 
+          I highly recommend Deus Cautela!"
+        </p>
+        <div class="testimonial-author">
+          <h4>Chukwu Emeka</h4>
+          <span>Abuja, FCT</span>
+        </div>
+      </div>
+
+     
+      <div class="testimonial-card slide-in">
+        <p class="testimonial-text">
+          "I recently had the pleasure of working with <strong>Deus Cautela</strong>. 
+          I was blown away by the level of service and professionalism that the team provided. 
+          They delivered high-quality solutions and were always available to answer any questions. 
+          I highly recommend Deus Cautela to anyone looking for exceptional service and unmatched protection."
+        </p>
+        <div class="testimonial-author">
+          <h4>Jide Adams</h4>
+          <span>Lagos, Nigeria</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  
+  <footer class="footer">
+  <div class="footer-container">
+
+    <!-- Brand / Intro -->
+    <div class="footer-brand">
+      <img src="logo.png" alt="Halogen Security" class="footer-logo">
+      <p class="footer-tagline">Protecting lives & property for over A Decade.</p>
+    </div>
+
+    <!-- Footer Sections -->
+    <div class="footer-sections">
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Leadership</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">News & Press</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#">Corporate Security</a></li>
+          <li><a href="#">CCTV & Monitoring</a></li>
+          <li><a href="#">Telecom Infrastructure</a></li>
+          <li><a href="#">Risk Management</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Case Studies</a></li>
+          <li><a href="#">White Papers</a></li>
+          <li><a href="#">FAQs</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>📍 Lagos, Nigeria</p>
+        <p>☎ +234 800-123-4567</p>
+        <p>✉ info@halogen.com</p>
+        <div class="social-icons">
+          <a href="#"><img src="fb.png" alt="Facebook"></a>
+          <a href="#"><img src="tw.png" alt="Twitter"></a>
+          <a href="#"><img src="in.png" alt="LinkedIn"></a>
+          <a href="#"><img src="ig.png" alt="Instagram"></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Newsletter CTA -->
+    <div class="newsletter">
+      <h4>Stay Updated</h4>
+      <p>Subscribe to our newsletter for security insights & updates.</p>
+      <form>
+        <input type="email" placeholder="Enter your email" required>
+        <button class="cta-footer">Subscribe</button>
+      </form>
+    </div>
+
+    <!-- Certifications -->
+    <div class="certifications">
+      <span>Certified by:</span>
+      <img src="iso.png" alt="ISO Certified">
+      <img src="MPI.png" alt="Partner Logo">
+      <img src="CAC.png" alt="Awards">
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+      <p>© 2025 Deuscautela Security. All Rights Reserved.</p>
+      <div class="quick-links">
+        <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <style>
+    
+.footer {
+  background: linear-gradient(to bottom, #e2e1e7, #dce9f9);
+  padding: 60px 20px;
+  color: #003f7d;
+  font-size: 0.95rem;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-brand {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.footer-logo { height: 70px; }
+.footer-tagline { 
+  color: #005b96; 
+  font-style: italic; 
+  margin-top: 10px; 
+  font-size: 1.1rem;
+}
+
+.footer-sections {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin-bottom: 40px;
+}
+
+.footer-col h4 {
+  margin-bottom: 14px;
+  color: #005b96;
+  font-size: 1.1rem;
+}
+.footer-col ul { list-style: none; padding: 0; }
+.footer-col a { 
+  color: #003f7d; 
+  text-decoration: none; 
+  display: block;
+  margin-bottom: 6px;
+  transition: color 0.3s;
+}
+.footer-col a:hover { color: #005b96; }
+
+.social-icons { display: flex; gap: 12px; margin-top: 12px; }
+.social-icons img { height: 20px; filter: grayscale(100%); transition: filter 0.3s; }
+.social-icons img:hover { filter: grayscale(0%); }
+
+.newsletter {
+  text-align: center;
+  margin: 40px 0;
+}
+.newsletter h4 { color: #005b96; }
+.newsletter input {
+  padding: 10px;
+  border: 1px solid #cfe2f3;
+  border-radius: 6px;
+  margin-right: 8px;
+  width: 250px;
+}
+.newsletter button {
+  background: #005b96;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 18px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.2s;
+}
+.newsletter button:hover { transform: translateY(-3px); }
+
+.certifications {
+  text-align: center;
+  margin: 30px 0;
+}
+.certifications img {
+  height: 40px;
+  margin: 0 10px;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+.certifications img:hover { opacity: 1; }
+
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #cfe2f3;
+  padding-top: 20px;
+  font-size: 0.85rem;
+}
+.footer-bottom .quick-links a {
+  color: #003f7d;
+  text-decoration: none;
+  margin: 0 6px;
+}
+.footer-bottom .quick-links a:hover { text-decoration: underline; }
+
+@media (max-width: 700px) {
+  .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+  .newsletter input { width: 100%; margin-bottom: 10px; }
+}
+
+
+  </style>
+</footer>
+
+
+  <script>
+const animateItems = document.querySelectorAll('[data-animate]');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      let effect = entry.target.dataset.animate;
+      entry.target.style.opacity = 1;
+      if (effect === "fade-in") {
+        entry.target.style.transform = "translateY(0)";
+      } else if (effect === "slide-up") {
+        entry.target.style.transform = "translateY(0)";
+      } else if (effect === "zoom-in") {
+        entry.target.style.transform = "scale(1)";
+      }
+    }
+  });
+}, { threshold: 0.2 });
+
+animateItems.forEach(item => {
+  item.style.opacity = 0;
+  if (item.dataset.animate === "slide-up") {
+    item.style.transform = "translateY(40px)";
+  } else if (item.dataset.animate === "zoom-in") {
+    item.style.transform = "scale(0.8)";
+  } else {
+    item.style.transform = "translateY(20px)";
+  }
+  observer.observe(item);
+});
+
+
+
+  function updateTime() {
+    const now = new Date();
+    document.getElementById("time").textContent = now.toLocaleTimeString();
+  }
+  setInterval(updateTime, 1000);
+  updateTime();
+
+
+
+
+async function loadSecurityNews() {
+  try {
+    let res = await fetch("https://gnews.io/api/v4/search?q=security&token=YOUR_API_KEY&lang=en");
+    let data = await res.json();
+    let track = document.querySelector(".news-track");
+    track.innerHTML = data.articles.map(a => `<span>📰 ${a.title}</span>`).join("");
+  } catch (err) {
+    console.log("Error loading news:", err);
+  }
+}
+loadSecurityNews();
+setInterval(loadSecurityNews, 100000); 
+
+
+document.addEventListener("scroll", function() {
+  const cards = document.querySelectorAll(".testimonial-card");
+  const triggerBottom = window.innerHeight * 0.85;
+
+  cards.forEach(card => {
+    const boxTop = card.getBoundingClientRect().top;
+    if(boxTop < triggerBottom) {
+      card.classList.add("show");
+    }
+  });
+});
+
+</script>
+</body>
+</html>
