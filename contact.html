@@ -766,7 +766,54 @@ iframe[title="chat widget"] {
 }
 
 
+@media (max-width: 991px) {
+  .services-across-africa {
+    padding: 70px 15px;
+  }
 
+  .services-panels {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+  }
+}
+
+/* Phones */
+@media (max-width: 600px) {
+  .services-across-africa {
+    padding: 50px 10px;
+  }
+
+  .services-panels {
+    grid-template-columns: 1fr; /* stack panels vertically */
+    gap: 15px;
+  }
+
+  .service-panel {
+    height: 280px; /* smaller height */
+    border-radius: 15px;
+  }
+
+  .text-layer {
+    padding: 15px;
+  }
+
+  .text-layer h3 {
+    font-size: 1.2rem;
+  }
+
+  .text-layer p {
+    font-size: 0.9rem;
+  }
+
+  .text-layer .btn-quote {
+    font-size: 0.85rem;
+    padding: 6px 14px;
+  }
+}
 
   </style>
 </head>
@@ -1189,3 +1236,4 @@ document.addEventListener("scroll", function() {
 </script>
 </body>
 </html>
+
