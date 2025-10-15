@@ -18,7 +18,7 @@
       color:var(--dark);
       line-height:1.5;
     }
-   
+    /* Header defaults to transparent */
 .site-header {
   background-color: transparent;
   position: fixed;
@@ -34,18 +34,18 @@
 }
 
 
-
+/* ============ NAVBAR ============ */
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;               
-  padding: 0 40px;           
-  background-color: white; 
+  width: 100%;               /* Make navbar stretch full width */
+  padding: 0 40px;           /* Add spacing left & right */
+  background-color: white; /* Set header/nav background */
   box-sizing: border-box;
 }
 
-
+/* Nav-links container */
 .nav-links {
   list-style: none;
   display: flex;
@@ -71,66 +71,6 @@
   color: blueviolet;              
 }
 
-
-    .hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
-}
-
-.hamburger span {
-  display: block;
-  width: 28px;
-  height: 3px;
-  background: #fff;
-  border-radius: 3px;
-  transition: all 0.3s ease;
-}
-
-
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    right: 0;
-    background: #111;
-    flex-direction: column;
-    text-align: center;
-    padding: 20px;
-  }
-
-  .nav-links.show {
-    display: flex;
-    animation: slideDown 0.3s ease forwards;
-  }
-
-  .hamburger {
-    display: flex;
-  }
-}
-
-
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-15px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-
-
-@media (max-width: 991px) {
-  .services-across-africa {
-    padding: 70px 15px;
-  }
-
 .news-rotator {
   width: 100%;
   background: linear-gradient(90deg, #111, #000);
@@ -145,7 +85,7 @@
 }
 
 
-
+/* ===== Info Bar Styles ===== */
 .info-bar {
   background: #fff;
   color: #100220;
@@ -187,7 +127,7 @@
 
 
 
-
+/* Logo */
 .logo {
   display: flex;
   align-items: center;
@@ -208,7 +148,7 @@
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-
+/* Dropdown basics */
 .dropdown {
   position: relative;
   z-index: 2000;
@@ -221,7 +161,7 @@
   padding: 10px;
 }
 
-
+/* Dropdown menu */
 .dropdown-content {
   display: none;
   position: absolute;
@@ -252,7 +192,8 @@
   display: block;
 }
 
-
+/* Mega dropdown container */
+/* Mega dropdown container */
 .mega-dropdown {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -270,7 +211,7 @@
   min-width: 600px;
   z-index: 2000;
 
- 
+  /* Animation states */
   opacity: 0;
   transform: translateY(15px); /* start slightly lower */
   visibility: hidden;
@@ -279,7 +220,7 @@
   transition: opacity 0.35s ease, transform 0.35s ease, visibility 0.35s ease;
 }
 
-
+/* Show mega dropdown on hover */
 .dropdown:hover .mega-dropdown {
   opacity: 1;
   transform: translateY(0); /* slide into place */
@@ -287,7 +228,7 @@
   pointer-events: auto;
 }
 
-
+/* Responsive adjustments */
 @media (max-width: 900px) {
   .mega-dropdown {
     grid-template-columns: 1fr;
@@ -300,7 +241,7 @@
   }
 }
 
-
+/* Mega dropdown left column */
 .dropdown-left h3 {
   font-size: 18px;
   margin: 0;
@@ -336,7 +277,7 @@
   color: #ff6b00;
 }
 
-
+/* Mega dropdown right column */
 .dropdown-right ul {
   list-style: none;
   padding: 0;
@@ -371,7 +312,7 @@
   color: var(--white);
 }
 
-
+/* Background image with fade/zoom animation */
 .hero::before {
   content: "";
   position: absolute;
@@ -384,7 +325,7 @@
   animation: heroBgIn 1.8s ease forwards;
 }
 
-
+/* Dark overlay */
 .hero::after {
   content: "";
   position: absolute;
@@ -395,7 +336,7 @@
   animation: overlayFade 2s ease forwards;
 }
 
-
+/* Text container with slide/fade animation */
 .hero-inner {
   position: relative;
   z-index: 2;
@@ -408,7 +349,7 @@
   animation: heroTextIn 1.6s ease forwards 0.8s;
 }
 
-
+/* KEYFRAMES */
 @keyframes heroBgIn {
   to {
     transform: scale(1);
@@ -825,54 +766,7 @@ iframe[title="chat widget"] {
 }
 
 
-@media (max-width: 991px) {
-  .services-across-africa {
-    padding: 70px 15px;
-  }
 
-  .services-panels {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-  }
-
-  .section-title {
-    font-size: 2.2rem;
-  }
-}
-
-/* Phones */
-@media (max-width: 600px) {
-  .services-across-africa {
-    padding: 50px 10px;
-  }
-
-  .services-panels {
-    grid-template-columns: 1fr; /* stack panels vertically */
-    gap: 15px;
-  }
-
-  .service-panel {
-    height: 280px; /* smaller height */
-    border-radius: 15px;
-  }
-
-  .text-layer {
-    padding: 15px;
-  }
-
-  .text-layer h3 {
-    font-size: 1.2rem;
-  }
-
-  .text-layer p {
-    font-size: 0.9rem;
-  }
-
-  .text-layer .btn-quote {
-    font-size: 0.85rem;
-    padding: 6px 14px;
-  }
-}
 
   </style>
 </head>
@@ -1235,15 +1129,15 @@ s1.setAttribute('crossorigin','*');
 s0.parentNode.insertBefore(s1,s0);
 })();
 
-
+// floating button opens chat
 document.getElementById("chatButton").addEventListener("click", function(e){
     e.preventDefault();
     if (typeof Tawk_API !== 'undefined') {
-        Tawk_API.maximize(); 
+        Tawk_API.maximize(); // opens the chat popup
     }
 });
 
-
+// Optional contact form handler
 const form = document.querySelector('.contact-form');
 if (form) {
   form.addEventListener('submit', function(e) {
@@ -1280,7 +1174,7 @@ loadSecurityNews();
 setInterval(loadSecurityNews, 100000); 
 
 
-
+//TESTIMONIALS
 document.addEventListener("scroll", function() {
   const cards = document.querySelectorAll(".testimonial-card");
   const triggerBottom = window.innerHeight * 0.85;
@@ -1292,18 +1186,6 @@ document.addEventListener("scroll", function() {
     }
   });
 });
-
-const hamburger = document.querySelector(".hamburger");
-  const navLinks = document.querySelector(".nav-links");
-
-  hamburger.addEventListener("click", () => {
-    navLinks.classList.toggle("show");
-    hamburger.classList.toggle("active");
-  });
-
-  
 </script>
 </body>
 </html>
-
-
