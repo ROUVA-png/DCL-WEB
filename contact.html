@@ -19,7 +19,7 @@
       color:var(--dark);
       line-height:1.5;
     }
-    /* Header defaults to transparent */
+   
 .site-header {
   background-color: transparent;
   position: fixed;
@@ -35,18 +35,18 @@
 }
 
 
-/* ============ NAVBAR ============ */
+
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;               /* Make navbar stretch full width */
-  padding: 0 40px;           /* Add spacing left & right */
-  background-color: white; /* Set header/nav background */
+  width: 100%;               
+  padding: 0 40px;           
+  background-color: white; 
   box-sizing: border-box;
 }
 
-/* Nav-links container */
+
 .nav-links {
   list-style: none;
   display: flex;
@@ -86,7 +86,7 @@
 }
 
 
-/* ===== Info Bar Styles ===== */
+
 .info-bar {
   background: #fff;
   color: #100220;
@@ -128,7 +128,7 @@
 
 
 
-/* Logo */
+
 .logo {
   display: flex;
   align-items: center;
@@ -149,7 +149,7 @@
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-/* Dropdown basics */
+
 .dropdown {
   position: relative;
   z-index: 2000;
@@ -193,8 +193,7 @@
   display: block;
 }
 
-/* Mega dropdown container */
-/* Mega dropdown container */
+
 .mega-dropdown {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -202,7 +201,7 @@
   box-sizing: border-box;
 
   position: absolute;
-  top: 100%; /* directly under parent link */
+  top: 100%; 
   left: 0;
   background: #f4f6fb;
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
@@ -214,22 +213,22 @@
 
   /* Animation states */
   opacity: 0;
-  transform: translateY(15px); /* start slightly lower */
+  transform: translateY(15px); 
   visibility: hidden;
   pointer-events: none;
 
   transition: opacity 0.35s ease, transform 0.35s ease, visibility 0.35s ease;
 }
 
-/* Show mega dropdown on hover */
+
 .dropdown:hover .mega-dropdown {
   opacity: 1;
-  transform: translateY(0); /* slide into place */
+  transform: translateY(0); 
   visibility: visible;
   pointer-events: auto;
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 900px) {
   .mega-dropdown {
     grid-template-columns: 1fr;
@@ -242,7 +241,7 @@
   }
 }
 
-/* Mega dropdown left column */
+
 .dropdown-left h3 {
   font-size: 18px;
   margin: 0;
@@ -278,7 +277,7 @@
   color: #ff6b00;
 }
 
-/* Mega dropdown right column */
+
 .dropdown-right ul {
   list-style: none;
   padding: 0;
@@ -313,7 +312,7 @@
   color: var(--white);
 }
 
-/* Background image with fade/zoom animation */
+
 .hero::before {
   content: "";
   position: absolute;
@@ -326,7 +325,7 @@
   animation: heroBgIn 1.8s ease forwards;
 }
 
-/* Dark overlay */
+
 .hero::after {
   content: "";
   position: absolute;
@@ -337,7 +336,7 @@
   animation: overlayFade 2s ease forwards;
 }
 
-/* Text container with slide/fade animation */
+
 .hero-inner {
   position: relative;
   z-index: 2;
@@ -350,7 +349,7 @@
   animation: heroTextIn 1.6s ease forwards 0.8s;
 }
 
-/* KEYFRAMES */
+
 @keyframes heroBgIn {
   to {
     transform: scale(1);
@@ -479,13 +478,13 @@
       transform:translateY(-3px);
     }
 
-/* Put in your CSS file */
+
 .map-wrap{
   position: relative;
   width: 100%;
-  max-width: 1150px;   /* match your layout */
+  max-width: 1150px;   
   margin: 24px auto;
-  aspect-ratio: 16 / 9;  /* keeps it responsive; change to 4/3 if you prefer */
+  aspect-ratio: 16 / 9; 
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 10px 24px rgba(0,0,0,.12);
@@ -499,7 +498,7 @@
 }
 
 
-/*TESTIMONIALS*/
+
 
 .testimonials-section {
   background: #0d0d0d;
@@ -615,13 +614,13 @@
   font-size: 0.95rem;
 }
 
-/* Hover effect */
+
 .perk-card:hover {
   transform: translateY(-10px) scale(1.03);
   box-shadow: 0 12px 35px rgba(0, 191, 255, 0.3);
 }
 
-/* Fade-up animation */
+
 .fade-up {
   animation: fadeUp 1s forwards;
 }
@@ -791,7 +790,7 @@ iframe[title="chat widget"] {
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
 
-        <!-- Leadership Dropdown -->
+      
         <li class="dropdown">
           <a href="#leadership" class="dropbtn">Leadership ▾</a>
           <ul class="dropdown-content">
@@ -801,7 +800,7 @@ iframe[title="chat widget"] {
           </ul>
         </li>
 
-        <!-- Cyber Security Service Mega Dropdown -->
+        
         <li class="dropdown">
           <a href="#" class="dropbtn">Our Security Solutions ▾</a>
           <div class="mega-dropdown">
@@ -819,7 +818,7 @@ iframe[title="chat widget"] {
               </ul>
             </div>
 
-            <!-- RIGHT COLUMN -->
+           
             <div class="dropdown-right">
               <ul>
                 <li><i class="icon">🛡️</i> Security Operations Center (SOC)</li>
@@ -1129,15 +1128,15 @@ s1.setAttribute('crossorigin','*');
 s0.parentNode.insertBefore(s1,s0);
 })();
 
-// floating button opens chat
+
 document.getElementById("chatButton").addEventListener("click", function(e){
     e.preventDefault();
     if (typeof Tawk_API !== 'undefined') {
-        Tawk_API.maximize(); // opens the chat popup
+        Tawk_API.maximize(); 
     }
 });
 
-// Optional contact form handler
+
 const form = document.querySelector('.contact-form');
 if (form) {
   form.addEventListener('submit', function(e) {
@@ -1174,7 +1173,7 @@ loadSecurityNews();
 setInterval(loadSecurityNews, 100000); 
 
 
-//TESTIMONIALS
+
 document.addEventListener("scroll", function() {
   const cards = document.querySelectorAll(".testimonial-card");
   const triggerBottom = window.innerHeight * 0.85;
@@ -1189,4 +1188,5 @@ document.addEventListener("scroll", function() {
 </script>
 </body>
 </html>
+
 
