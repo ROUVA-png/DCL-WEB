@@ -31,7 +31,7 @@
 }
 
 
-/* ===== Info Bar Styles ===== */
+
 .info-bar {
   background: #fff;
   color: #100220;
@@ -72,18 +72,18 @@
 }
 
 
-/* ============ NAVBAR ============ */
+
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;               /* Make navbar stretch full width */
-  padding: 0 40px;           /* Add spacing left & right */
-  background-color: white; /* Set header/nav background */
+  width: 100%;              
+  padding: 0 40px;           
+  background-color: white; 
   box-sizing: border-box;
 }
 
-/* Nav-links container */
+
 .nav-links {
   list-style: none;
   display: flex;
@@ -109,7 +109,7 @@
   color: blueviolet;              
 }
 
-/* Logo */
+
 .logo {
   display: flex;
   align-items: center;
@@ -130,7 +130,7 @@
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-/* Dropdown basics */
+
 .dropdown {
   position: relative;
 }
@@ -142,7 +142,7 @@
   padding: 10px;
 }
 
-/* Dropdown menu */
+
 .dropdown-content {
   display: none;
   position: absolute;
@@ -173,8 +173,7 @@
   display: block;
 }
 
-/* Mega dropdown container */
-/* Mega dropdown container */
+
 .mega-dropdown {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -182,7 +181,7 @@
   box-sizing: border-box;
 
   position: absolute;
-  top: 100%; /* directly under parent link */
+  top: 100%; 
   left: 0;
   background: #f4f6fb;
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
@@ -192,28 +191,28 @@
   min-width: 600px;
   z-index: 2000;
 
-  /* Animation states */
+ 
   opacity: 0;
-  transform: translateY(15px); /* start slightly lower */
+  transform: translateY(15px); 
   visibility: hidden;
   pointer-events: none;
 
   transition: opacity 0.35s ease, transform 0.35s ease, visibility 0.35s ease;
 }
 
-/* Show mega dropdown on hover */
+
 .dropdown:hover .mega-dropdown {
   opacity: 1;
-  transform: translateY(0); /* slide into place */
+  transform: translateY(0); 
   visibility: visible;
   pointer-events: auto;
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 900px) {
   .mega-dropdown {
     grid-template-columns: 1fr;
-    min-width: 100%; /* take full width */
+    min-width: 100%;
     position: static;
     box-shadow: none;
     border-radius: 0;
@@ -222,7 +221,7 @@
   }
 }
 
-/* Mega dropdown left column */
+
 .dropdown-left h3 {
   font-size: 18px;
   margin: 0;
@@ -258,7 +257,7 @@
   color: #ff6b00;
 }
 
-/* Mega dropdown right column */
+
 .dropdown-right ul {
   list-style: none;
   padding: 0;
@@ -506,7 +505,7 @@
   box-shadow: 0 12px 35px rgba(0, 191, 255, 0.3);
 }
 
-/* Fade-up animation */
+
 .fade-up {
   animation: fadeUp 1s forwards;
 }
@@ -862,3 +861,4 @@ document.addEventListener("scroll", function() {
   </script>
 </body>
 </html>
+
