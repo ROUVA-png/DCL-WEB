@@ -1,7 +1,7 @@
 const slides = [
   
    { img: 'secure3.png', header: 'Adequate <span style="color:skyblue;">Monitoring System</span>', para: 'Committed to excellence and reliability.' },
-    { img: 'telecom.png', header: 'Telecoms Infrastructure <span style="color:skyblue;">Security</span>', para: 'Modern solutions secured by expertise.' },
+  
   { img: 'CCTV.png', header: '<span style="color:lightblue;">Technology</span>-Driven <span style="color:skyblue;">Protection</span>', para: 'Modern solutions secured by expertise.' },
   
   { img: 'security.png', header: 'Security <span style="color:skyblue;">You Can Trust</span>', para: 'Your protection, powered by innovation.' }
@@ -187,5 +187,6 @@ setInterval(loadSecurityNews, 100000);
     navLinks.classList.toggle("show");
     hamburger.classList.toggle("active");
   });
+
 
 
