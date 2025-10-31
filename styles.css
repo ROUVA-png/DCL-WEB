@@ -456,7 +456,7 @@ body {
 
 .hero-slider {
   position: relative;
-  height: 95vh;
+  height: 80vh;
   overflow: hidden;
   color:  white;
 }
@@ -1646,4 +1646,5 @@ footer {
     padding: 6px 14px;
   }
 }
+
 
