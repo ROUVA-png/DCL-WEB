@@ -188,5 +188,46 @@ setInterval(loadSecurityNews, 100000);
     hamburger.classList.toggle("active");
   });
 
+function randomColor() {
+      const hue = Math.floor(Math.random() * 360);
+      return `hsl(${hue}, 100%, 65%)`;
+    }
+
+    
+    function createParticle() {
+      const particle = document.createElement('div');
+      particle.classList.add('particle');
+      particle.style.left = Math.random() * window.innerWidth + 'px';
+      particle.style.bottom = '0px';
+      particle.style.width = particle.style.height = Math.random() * 4 + 2 + 'px';
+      particle.style.background = randomColor();
+      particle.style.animationDuration = 1.5 + Math.random() * 1.5 + 's';
+      document.getElementById('welcome-overlay').appendChild(particle);
+      setTimeout(() => particle.remove(), 2000);
+    }
+
+   
+    function createBurst() {
+      const burst = document.createElement('div');
+      burst.classList.add('burst');
+      burst.style.left = window.innerWidth / 2 + 'px';
+      burst.style.top = window.innerHeight / 2 + 'px';
+      burst.style.background = randomColor();
+      burst.style.setProperty('--x', (Math.random() - 0.5) * 500 + 'px');
+      burst.style.setProperty('--y', (Math.random() - 0.5) * 500 + 'px');
+      document.getElementById('welcome-overlay').appendChild(burst);
+      setTimeout(() => burst.remove(), 1000);
+    }
+
+  
+    const particleInterval = setInterval(createParticle, 100);
+    const burstInterval = setInterval(createBurst, 200);
+
+    
+    setTimeout(() => {
+      clearInterval(particleInterval);
+      clearInterval(burstInterval);
+      document.getElementById('welcome-overlay').classList.add('hidden');
+    }, 4000);
 
 
