@@ -228,6 +228,7 @@ function randomColor() {
       clearInterval(particleInterval);
       clearInterval(burstInterval);
       document.getElementById('welcome-overlay').classList.add('hidden');
-    }, 4000);
+    }, 3000);
+
 
 
