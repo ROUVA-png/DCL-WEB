@@ -135,7 +135,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;               
+  width: 100%; 
+  height:80px;              
   padding: 0 3vw;         
   background-color: white; 
   box-sizing: border-box;
@@ -303,7 +304,7 @@ body {
   align-items: center;
 }
 .logo img {
-  height: auto;
+  height: 80px;
   width: 100%;
   max-width: 300px;
   margin-right: 1.75em;
